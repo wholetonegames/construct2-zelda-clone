@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout active="1" order="1">a54</layout>
+        <layout order="2">b35</layout>
+        <layout order="4">b70</layout>
+        <layout order="6">HUDmenu</layout>
+        <event-sheet order="3">globalVariables</event-sheet>
+        <event-sheet order="5">dialogueModel</event-sheet>
+        <event-sheet order="7">saveModel</event-sheet>
+        <event-sheet order="8">introScreenModel</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="1" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="0">
+        <family expanded="0" name="heroWeapons" />
+        <family expanded="0" name="enemyAttacker" />
+        <family expanded="0" name="obstacleTiles" />
+        <family expanded="0" name="NPCs" />
+        <family expanded="0" name="doorsGeneral" />
+        <family expanded="0" name="playerCharacter" />
+        <family expanded="0" name="rocks" />
+        <family expanded="0" name="enemyMvChase" />
+        <family expanded="0" name="enemyMvRandom" />
+        <family expanded="0" name="enemyMvTeleport" />
+        <family expanded="0" name="heroSharp" />
+        <family expanded="0" name="closedWarp" />
+        <family expanded="0" name="bossMove" />
+        <family expanded="0" name="heroProjectiles" />
+        <family expanded="0" name="obstacleExpand" />
+        <family expanded="0" name="doorsNorth" />
+        <family expanded="0" name="doorsEast" />
+        <family expanded="0" name="doorsSouth" />
+        <family expanded="0" name="doorsWest" />
+        <family expanded="0" name="doorsBlue" />
+        <family expanded="0" name="doorsRed" />
+        <family expanded="0" name="colorSwitches" />
+        <family expanded="0" name="doorClosedType" />
+        <family expanded="0" name="menu9Square" />
+        <family expanded="0" name="menuSprites" />
+        <family expanded="0" name="roomSkirtings" />
+        <family expanded="0" name="conveyorTypes" />
+        <family expanded="0" name="moneyValues" />
+        <family expanded="0" name="hpRefill" />
+        <family expanded="0" name="traps" />
+        <family expanded="0" name="bulletTypes" />
+        <family expanded="0" name="pickupItems" />
+        <family expanded="0" name="playerAvatars" />
+        <family expanded="0" name="floorSpikes" />
+        <family expanded="0" name="spriteObstacle" />
+        <family expanded="0" name="introSoldiers" />
+    </families-expanded>
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/doorTypes/" />
+        <folder expanded="0" path="object-folder/enemyTypes/" />
+        <folder expanded="0" path="object-folder/heroTypes/" />
+        <folder expanded="0" path="object-folder/menuTypes/" />
+        <folder expanded="0" path="object-folder/npcTypes/" />
+        <folder expanded="0" path="object-folder/pauseTypes/" />
+        <folder expanded="0" path="object-folder/terrainTypes/" />
+        <folder expanded="0" path="object-folder/introFolder/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="0" path="layout-folder/doNotUse/" />
+        <folder expanded="0" path="layout-folder/dungeonB1/" />
+        <folder expanded="0" path="layout-folder/dungeonC4/" />
+        <folder expanded="0" path="layout-folder/dungeonD3/" />
+        <folder expanded="0" path="layout-folder/dungeonE5/" />
+        <folder expanded="0" path="layout-folder/dungeonF2/" />
+        <folder expanded="0" path="layout-folder/dungeonG6/" />
+        <folder expanded="0" path="layout-folder/dungeonH7/" />
+        <folder expanded="1" path="layout-folder/overgroundA/" />
+        <folder expanded="0" path="layout-folder/cutsceneIntro/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="0" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/doorW/" />
+        <folder expanded="1" path="animation-folder/doorE/" />
+        <folder expanded="1" path="animation-folder/doorN/" />
+        <folder expanded="1" path="animation-folder/doorS/" />
+        <folder expanded="1" path="animation-folder/warpN/" />
+        <folder expanded="1" path="animation-folder/warpS/" />
+        <folder expanded="1" path="animation-folder/warpW/" />
+        <folder expanded="1" path="animation-folder/warpE/" />
+        <folder expanded="1" path="animation-folder/gateE/" />
+        <folder expanded="1" path="animation-folder/gateN/" />
+        <folder expanded="1" path="animation-folder/gateS/" />
+        <folder expanded="1" path="animation-folder/gateW/" />
+        <folder expanded="1" path="animation-folder/blueDoorE/" />
+        <folder expanded="1" path="animation-folder/blueDoorN/" />
+        <folder expanded="1" path="animation-folder/blueDoorS/" />
+        <folder expanded="1" path="animation-folder/blueDoorW/" />
+        <folder expanded="1" path="animation-folder/redDoorE/" />
+        <folder expanded="1" path="animation-folder/redDoorS/" />
+        <folder expanded="1" path="animation-folder/redDoorN/" />
+        <folder expanded="1" path="animation-folder/redDoorW/" />
+        <folder expanded="1" path="animation-folder/lockedDoorE/" />
+        <folder expanded="1" path="animation-folder/lockedDoorN/" />
+        <folder expanded="1" path="animation-folder/lockedDoorS/" />
+        <folder expanded="1" path="animation-folder/lockedDoorW/" />
+        <folder expanded="1" path="animation-folder/enemyBullet/" />
+        <folder expanded="1" path="animation-folder/enemy03/" />
+        <folder expanded="1" path="animation-folder/enemy01/" />
+        <folder expanded="1" path="animation-folder/enemy02/" />
+        <folder expanded="1" path="animation-folder/enemy04/" />
+        <folder expanded="1" path="animation-folder/boss1/" />
+        <folder expanded="1" path="animation-folder/tigerChaser/" />
+        <folder expanded="1" path="animation-folder/boss2/" />
+        <folder expanded="1" path="animation-folder/tigerRandom/" />
+        <folder expanded="1" path="animation-folder/enemyEgg/" />
+        <folder expanded="1" path="animation-folder/boss3head/" />
+        <folder expanded="1" path="animation-folder/boss3follow1/" />
+        <folder expanded="1" path="animation-folder/boss3follow2/" />
+        <folder expanded="1" path="animation-folder/boss3follow3/" />
+        <folder expanded="1" path="animation-folder/boss3follow4/" />
+        <folder expanded="1" path="animation-folder/boss3follow5/" />
+        <folder expanded="1" path="animation-folder/boss3follow6/" />
+        <folder expanded="1" path="animation-folder/enemy05/" />
+        <folder expanded="1" path="animation-folder/enemy06/" />
+        <folder expanded="1" path="animation-folder/enemy07/" />
+        <folder expanded="1" path="animation-folder/enemy08/" />
+        <folder expanded="1" path="animation-folder/enemy09/" />
+        <folder expanded="1" path="animation-folder/enemy10/" />
+        <folder expanded="1" path="animation-folder/enemy11/" />
+        <folder expanded="1" path="animation-folder/enemy12/" />
+        <folder expanded="1" path="animation-folder/enemy15/" />
+        <folder expanded="1" path="animation-folder/enemy16/" />
+        <folder expanded="1" path="animation-folder/enemy18/" />
+        <folder expanded="1" path="animation-folder/enemy13/" />
+        <folder expanded="1" path="animation-folder/enemy17/" />
+        <folder expanded="1" path="animation-folder/enemyEyeBullet/" />
+        <folder expanded="1" path="animation-folder/player1lead/" />
+        <folder expanded="1" path="animation-folder/player12nd/" />
+        <folder expanded="1" path="animation-folder/player13rd/" />
+        <folder expanded="1" path="animation-folder/heroBullet/" />
+        <folder expanded="1" path="animation-folder/heroSword/" />
+        <folder expanded="1" path="animation-folder/bomb/" />
+        <folder expanded="1" path="animation-folder/bombSmoke/" />
+        <folder expanded="1" path="animation-folder/rescue_cicada/" />
+        <folder expanded="1" path="animation-folder/rescue_slave/" />
+        <folder expanded="1" path="animation-folder/rescue_soldier/" />
+        <folder expanded="1" path="animation-folder/boomerang/" />
+        <folder expanded="1" path="animation-folder/mrCicada/" />
+        <folder expanded="1" path="animation-folder/msSoldier/" />
+        <folder expanded="1" path="animation-folder/msSlave/" />
+        <folder expanded="1" path="animation-folder/cicadaShoot/" />
+        <folder expanded="1" path="animation-folder/cicadaStatue/" />
+        <folder expanded="1" path="animation-folder/magicPowder/" />
+        <folder expanded="1" path="animation-folder/fire/" />
+        <folder expanded="1" path="animation-folder/wind/" />
+        <folder expanded="1" path="animation-folder/musicalNote/" />
+        <folder expanded="1" path="animation-folder/addSoldier2Party/" />
+        <folder expanded="1" path="animation-folder/addCicada2Party/" />
+        <folder expanded="1" path="animation-folder/roomTransition/" />
+        <folder expanded="1" path="animation-folder/miniMap/" />
+        <folder expanded="1" path="animation-folder/miniMapChara/" />
+        <folder expanded="1" path="animation-folder/menuHeart1/" />
+        <folder expanded="1" path="animation-folder/menuHeart2/" />
+        <folder expanded="1" path="animation-folder/menuHeart3/" />
+        <folder expanded="1" path="animation-folder/menuHeart4/" />
+        <folder expanded="1" path="animation-folder/menuHeart5/" />
+        <folder expanded="1" path="animation-folder/menuHeart6/" />
+        <folder expanded="1" path="animation-folder/bombMenu/" />
+        <folder expanded="1" path="animation-folder/heroBulletMenu/" />
+        <folder expanded="1" path="animation-folder/boomerangMenu/" />
+        <folder expanded="1" path="animation-folder/menu1playerPortrait/" />
+        <folder expanded="1" path="animation-folder/menuRoomTemplate/" />
+        <folder expanded="1" path="animation-folder/hpPotionMenu/" />
+        <folder expanded="1" path="animation-folder/menuMoney/" />
+        <folder expanded="1" path="animation-folder/menuCicadaShoot/" />
+        <folder expanded="1" path="animation-folder/menuCicStatue/" />
+        <folder expanded="1" path="animation-folder/mpEnergy/" />
+        <folder expanded="1" path="animation-folder/menuPowder/" />
+        <folder expanded="1" path="animation-folder/menuFire/" />
+        <folder expanded="1" path="animation-folder/menuWind/" />
+        <folder expanded="1" path="animation-folder/MenuMusicalNote/" />
+        <folder expanded="1" path="animation-folder/cicadaIntroLogo/" />
+        <folder expanded="1" path="animation-folder/npcHitArea/" />
+        <folder expanded="1" path="animation-folder/savePoint/" />
+        <folder expanded="1" path="animation-folder/money/" />
+        <folder expanded="1" path="animation-folder/hpPotionMax/" />
+        <folder expanded="1" path="animation-folder/heartRefill/" />
+        <folder expanded="1" path="animation-folder/heartContainer/" />
+        <folder expanded="1" path="animation-folder/npcChara/" />
+        <folder expanded="1" path="animation-folder/rock/" />
+        <folder expanded="1" path="animation-folder/rockDestroyed/" />
+        <folder expanded="1" path="animation-folder/puddlePotion/" />
+        <folder expanded="1" path="animation-folder/darkRoom/" />
+        <folder expanded="1" path="animation-folder/blueRedSwitch/" />
+        <folder expanded="1" path="animation-folder/conveyorE/" />
+        <folder expanded="1" path="animation-folder/conveyorW/" />
+        <folder expanded="1" path="animation-folder/conveyorN/" />
+        <folder expanded="1" path="animation-folder/conveyorS/" />
+        <folder expanded="1" path="animation-folder/trap01horizontal/" />
+        <folder expanded="1" path="animation-folder/trap01vertical/" />
+        <folder expanded="1" path="animation-folder/foundBoomerang/" />
+        <folder expanded="1" path="animation-folder/spikeSwitch/" />
+        <folder expanded="1" path="animation-folder/computer2/" />
+        <folder expanded="1" path="animation-folder/deadlyFog/" />
+        <folder expanded="1" path="animation-folder/floorSpikesType1/" />
+        <folder expanded="1" path="animation-folder/controlledSpikeType1/" />
+        <folder expanded="1" path="animation-folder/controlledSpikeType0/" />
+        <folder expanded="1" path="animation-folder/floorSpikesType2/" />
+        <folder expanded="1" path="animation-folder/foundBomb/" />
+        <folder expanded="1" path="animation-folder/controlledSpikeBoss2/" />
+        <folder expanded="1" path="animation-folder/blinkDestroyed/" />
+        <folder expanded="1" path="animation-folder/blinkDeath/" />
+        <folder expanded="1" path="animation-folder/hpPotionConditional/" />
+        <folder expanded="1" path="animation-folder/pauseBG/" />
+        <folder expanded="1" path="animation-folder/jcLogo/" />
+        <folder expanded="1" path="animation-folder/rpscLogo/" />
+        <folder expanded="1" path="animation-folder/wholetoneLogo/" />
+        <folder expanded="1" path="animation-folder/camera_scroller/" />
+        <folder expanded="1" path="animation-folder/cicadaLogo/" />
+        <folder expanded="1" path="animation-folder/introTigerSoldier/" />
+        <folder expanded="1" path="animation-folder/lionSoldierIntro/" />
+        <folder expanded="1" path="animation-folder/introdeadlyFog/" />
+        <folder expanded="1" path="animation-folder/queenIntro/" />
+        <folder expanded="1" path="animation-folder/cicadaStatueIntro/" />
+        <folder expanded="1" path="animation-folder/cicWorshipperIntro/" />
+        <folder expanded="1" path="animation-folder/cicVictimIntro/" />
+        <folder expanded="1" path="animation-folder/focusShadow/" />
+        <folder expanded="1" path="animation-folder/introDaSlave/" />
+        <folder expanded="1" path="animation-folder/introDaSoldier/" />
+    </folders-expanded>
+</c2uistate>
