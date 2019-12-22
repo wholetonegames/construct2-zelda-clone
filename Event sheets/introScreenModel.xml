@@ -1,0 +1,784 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>introScreenModel</name>
+    <events>
+        <event-block sid="137607049262803">
+            <conditions>
+                <condition id="-18" name="On created" sid="807653549481061" type="game1" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="166554626981597" type="System">
+                    <param id="0" name="Variable">PauseGame</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Request URL" sid="260784260939399" type="AJAX">
+                    <param id="0" name="Tag">&quot;load1&quot;</param>
+                    <param id="1" name="URL">&quot;/saves/&quot;&amp;LOADSTATE1</param>
+                </action>
+                <action id="0" name="Request URL" sid="150019309193427" type="AJAX">
+                    <param id="0" name="Tag">&quot;load2&quot;</param>
+                    <param id="1" name="URL">&quot;/saves/&quot;&amp;LOADSTATE2</param>
+                </action>
+                <action id="0" name="Request URL" sid="242962902129333" type="AJAX">
+                    <param id="0" name="Tag">&quot;load3&quot;</param>
+                    <param id="1" name="URL">&quot;/saves/&quot;&amp;LOADSTATE3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="729517772605887" title="introFunctions">
+            <sub-events>
+                <event-block sid="722934425511307">
+                    <conditions>
+                        <condition id="0" name="On function" sid="903658492038062" type="function">
+                            <param id="0" name="Name">&quot;startNewGame&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Create folder" sid="881183344038925" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder &amp;&quot;saves&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="605954178706148" type="System">
+                            <param id="0" name="Variable">DateTime</param>
+                            <param id="1" name="Value">Browser.ExecJS(&quot;Date()&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="356274633798732" type="System">
+                            <param id="0" name="Variable">startingPositionAX</param>
+                            <param id="1" name="Value">RESOLUTION_WIDTH / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="393778182426814" type="System">
+                            <param id="0" name="Variable">startingPositionAY</param>
+                            <param id="1" name="Value">RESOLUTION_HEIGHT  - CHARA_DISTANCE * 3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="485677255763376" type="System">
+                            <param id="0" name="Variable">startingPositionBX</param>
+                            <param id="1" name="Value">RESOLUTION_WIDTH / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="946806856364466" type="System">
+                            <param id="0" name="Variable">startingPositionBY</param>
+                            <param id="1" name="Value">RESOLUTION_HEIGHT  - CHARA_DISTANCE * 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="187748246171788" type="System">
+                            <param id="0" name="Variable">startingPositionCX</param>
+                            <param id="1" name="Value">RESOLUTION_WIDTH / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="414038357574705" type="System">
+                            <param id="0" name="Variable">startingPositionCY</param>
+                            <param id="1" name="Value">RESOLUTION_HEIGHT  - CHARA_DISTANCE</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="945619351820523" type="System">
+                            <param id="0" name="Variable">initialAngle</param>
+                            <param id="1" name="Value">-90</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="627929583855659" type="System">
+                            <param id="0" name="Variable">HP_max_Cicada</param>
+                            <param id="1" name="Value">HP_DEFAULT</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="882480546157267" type="System">
+                            <param id="0" name="Variable">HP_max_Slave</param>
+                            <param id="1" name="Value">HP_DEFAULT</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="201816202290723" type="System">
+                            <param id="0" name="Variable">HP_max_Soldier</param>
+                            <param id="1" name="Value">HP_DEFAULT</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="426802588539206" type="System">
+                            <param id="0" name="Variable">KO_Cicada</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="622715539140978" type="System">
+                            <param id="0" name="Variable">KO_Soldier</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Set value" sid="764666954425768" type="System">
+                            <param id="0" name="Variable">partyConfiguration</param>
+                            <param id="1" name="Value">PARTY_OF_1</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Set value" sid="972463365265762" type="System">
+                            <param id="0" name="Variable">has_cicada_joined</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Set value" sid="419605572770876" type="System">
+                            <param id="0" name="Variable">has_soldier_joined</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="238245098991251" type="System">
+                            <param id="0" name="Variable">partyMoney</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="395175789407669" type="System">
+                            <param id="0" name="Variable">dungeonLevel</param>
+                            <param id="1" name="Value">&quot;a&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="763964952580334" type="System">
+                            <param id="0" name="Variable">dungeonX</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="436227595244617" type="System">
+                            <param id="0" name="Variable">dungeonY</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="489611568746566" type="System">
+                            <param id="0" name="Variable">lastCheckpoint</param>
+                            <param id="1" name="Value">&quot;a54&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="637214206262334" type="System">
+                            <param id="0" name="Variable">dungeonMaxX</param>
+                            <param id="1" name="Value">9</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="530249907854970" type="System">
+                            <param id="0" name="Variable">dungeonMaxY</param>
+                            <param id="1" name="Value">9</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="519623365035333" type="System">
+                            <param id="0" name="Variable">Item_cicada_requiem</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="512283165826694" type="System">
+                            <param id="0" name="Variable">Item_cicada_shot</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="823751255963504" type="System">
+                            <param id="0" name="Variable">Item_cicada_statue</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="589888974355782" type="System">
+                            <param id="0" name="Variable">Item_slave_boomerang</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="233379086874476" type="System">
+                            <param id="0" name="Variable">Item_slave_hpPotion</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="734154328147700" type="System">
+                            <param id="0" name="Variable">Item_slave_magic</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="872409016706482" type="System">
+                            <param id="0" name="Variable">Item_sodier_wind</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="758123455140260" type="System">
+                            <param id="0" name="Variable">Item_soldier_bomb</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="326301731446890" type="System">
+                            <param id="0" name="Variable">Item_soldier_fire</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="520473013187442" type="System">
+                            <param id="0" name="Variable">Item_soldier_shot</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="632844700109430" type="System">
+                            <param id="0" name="Variable">swordLevel</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="842041028155952" type="System">
+                            <param id="0" name="Variable">beatenBoss1</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="124988839854501" type="System">
+                            <param id="0" name="Variable">beatenBoss2</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="940617919581811" type="System">
+                            <param id="0" name="Variable">beatenBoss3</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="854477215911957" type="System">
+                            <param id="0" name="Variable">beatenBoss4</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="269558392675849" type="System">
+                            <param id="0" name="Variable">beatenBoss5</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="211066846231919" type="System">
+                            <param id="0" name="Variable">beatenBoss6</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="534204102137941" type="System">
+                            <param id="0" name="Variable">beatenBoss7</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="899789514138362" type="System">
+                            <param id="0" name="Variable">PauseGame</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="519879770892700" type="System">
+                            <param id="0" name="Variable">partyConfiguration</param>
+                            <param id="1" name="Value">PARTY_OF_3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="361520469404904" type="System">
+                            <param id="0" name="Variable">has_cicada_joined</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="237698364965885" type="System">
+                            <param id="0" name="Variable">has_soldier_joined</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="689737529127311" type="System">
+                            <param id="0" name="Layout">a54</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="696416945200544">
+                    <conditions>
+                        <condition id="0" name="On function" sid="757974247413383" type="function">
+                            <param id="0" name="Name">&quot;loadSlot123&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Load" sid="950905491463823" type="XML">
+                            <param id="0" name="XML">AJAX.LastData</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="904363289699578" type="System">
+                            <param id="0" name="Variable">HP_max_Cicada</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@a&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="767327050442329" type="System">
+                            <param id="0" name="Variable">HP_max_Slave</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@b&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="519487069296066" type="System">
+                            <param id="0" name="Variable">HP_max_Soldier</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@c&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="413455450818459" type="System">
+                            <param id="0" name="Variable">KO_Cicada</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@d&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="767940184551049" type="System">
+                            <param id="0" name="Variable">KO_Soldier</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@e&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="852560371485536" type="System">
+                            <param id="0" name="Variable">partyConfiguration</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@f&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="289537450676742" type="System">
+                            <param id="0" name="Variable">has_cicada_joined</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@g&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="988851873521086" type="System">
+                            <param id="0" name="Variable">has_soldier_joined</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@h&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="932343851790842" type="System">
+                            <param id="0" name="Variable">partyMoney</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@i&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="439413575444820" type="System">
+                            <param id="0" name="Variable">dungeonLevel</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;/p1/@j&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="260224802424208" type="System">
+                            <param id="0" name="Variable">dungeonX</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@k&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="527349632429837" type="System">
+                            <param id="0" name="Variable">dungeonY</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@l&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="227384859536009" type="System">
+                            <param id="0" name="Variable">lastCheckpoint</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;/p1/@m&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="193402087497235" type="System">
+                            <param id="0" name="Variable">dungeonMaxX</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@n&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="525058513485345" type="System">
+                            <param id="0" name="Variable">dungeonMaxY</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@o&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="668521347376765" type="System">
+                            <param id="0" name="Variable">Item_cicada_requiem</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@p&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="530097720727296" type="System">
+                            <param id="0" name="Variable">Item_cicada_shot</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@q&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="186334573449154" type="System">
+                            <param id="0" name="Variable">Item_cicada_statue</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@r&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="791073424878660" type="System">
+                            <param id="0" name="Variable">Item_slave_boomerang</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@s&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="395308940603216" type="System">
+                            <param id="0" name="Variable">Item_slave_hpPotion</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@t&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="614388481063827" type="System">
+                            <param id="0" name="Variable">Item_slave_magic</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@u&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="809612223302727" type="System">
+                            <param id="0" name="Variable">Item_sodier_wind</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@v&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="140643764772732" type="System">
+                            <param id="0" name="Variable">Item_soldier_bomb</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@w&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="575044357873505" type="System">
+                            <param id="0" name="Variable">Item_soldier_fire</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@x&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="813918203532932" type="System">
+                            <param id="0" name="Variable">Item_soldier_shot</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@y&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="905215596626557" type="System">
+                            <param id="0" name="Variable">DateTime</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;/p1/@z&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="831609672188795" type="System">
+                            <param id="0" name="Variable">swordLevel</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@aa&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="451348894522694" type="System">
+                            <param id="0" name="Variable">beatenBoss1</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@ab&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="749693650899180" type="System">
+                            <param id="0" name="Variable">beatenBoss2</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@ac&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="338783076254039" type="System">
+                            <param id="0" name="Variable">beatenBoss3</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@ad&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="406042298165347" type="System">
+                            <param id="0" name="Variable">beatenBoss4</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@ae&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="107009501300234" type="System">
+                            <param id="0" name="Variable">beatenBoss5</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@af&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="969922625655048" type="System">
+                            <param id="0" name="Variable">beatenBoss6</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@ag&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="674619034988838" type="System">
+                            <param id="0" name="Variable">beatenBoss7</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@ah&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="353124000339351" type="System">
+                            <param id="0" name="Variable">PauseGame</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="592627680635575" type="System">
+                            <param id="0" name="Layout">XML.StringValue(&quot;/p1/@m&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="767089920510228" title="loadingSlots">
+            <sub-events>
+                <event-block sid="931594066093071">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="308462403544733" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">game1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="750127761574746" type="System">
+                            <param id="0" name="Variable">currentLoadState</param>
+                            <param id="1" name="Value">LOADSTATE1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="498261877144417">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="151834967053916" type="System">
+                                    <param id="0" name="Variable">hasLoad1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="650691193639359" type="function">
+                                    <param id="0" name="Name">&quot;startNewGame&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="553976722267464">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="576128347932557" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="582552085507539" type="function">
+                                    <param id="0" name="Name">&quot;loadSlot123&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="719523005126482">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="179572743091808" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">game2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="734795746014902" type="System">
+                            <param id="0" name="Variable">currentLoadState</param>
+                            <param id="1" name="Value">LOADSTATE2</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="876008558787488">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="871581643930552" type="System">
+                                    <param id="0" name="Variable">hasLoad2</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="433415480153730" type="function">
+                                    <param id="0" name="Name">&quot;startNewGame&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="552336001048969">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="680058568090396" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="153369045298736" type="function">
+                                    <param id="0" name="Name">&quot;loadSlot123&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="533426531632203">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="419258486610167" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">game3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="882619186503740" type="System">
+                            <param id="0" name="Variable">currentLoadState</param>
+                            <param id="1" name="Value">LOADSTATE3</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="171690166800054">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="799046349944776" type="System">
+                                    <param id="0" name="Variable">hasLoad3</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="969523008645118" type="function">
+                                    <param id="0" name="Name">&quot;startNewGame&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="382363490951381">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="319649866476299" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="231786684015440" type="function">
+                                    <param id="0" name="Name">&quot;loadSlot123&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="756921979080219">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="171479895338654" type="AJAX">
+                            <param id="0" name="Tag">&quot;load1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Load" sid="645564467874089" type="XML">
+                            <param id="0" name="XML">AJAX.LastData</param>
+                        </action>
+                        <action id="0" name="Set text" sid="486641555054128" type="game1">
+                            <param id="0" name="Text">XML.StringValue(&quot;/p1/@z&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="562764142993895" type="System">
+                            <param id="0" name="Variable">hasLoad1</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="191231144579373">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="379549724751889" type="AJAX">
+                            <param id="0" name="Tag">&quot;load2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Load" sid="186241573951601" type="XML">
+                            <param id="0" name="XML">AJAX.LastData</param>
+                        </action>
+                        <action id="0" name="Set text" sid="938783519817618" type="game2">
+                            <param id="0" name="Text">XML.StringValue(&quot;/p1/@z&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="997189226915191" type="System">
+                            <param id="0" name="Variable">hasLoad2</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="918055587254284">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="512138673751208" type="AJAX">
+                            <param id="0" name="Tag">&quot;load3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Load" sid="749025550701734" type="XML">
+                            <param id="0" name="XML">AJAX.LastData</param>
+                        </action>
+                        <action id="0" name="Set text" sid="594467053200707" type="game3">
+                            <param id="0" name="Text">XML.StringValue(&quot;/p1/@z&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="325637500105418" type="System">
+                            <param id="0" name="Variable">hasLoad3</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="909761197547996">
+                    <conditions>
+                        <condition id="1" name="On error" sid="673766719529375" type="AJAX">
+                            <param id="0" name="Tag">&quot;load1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="774115050457665" type="game1">
+                            <param id="0" name="Text">&quot;New Game&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="568187164019385" type="System">
+                            <param id="0" name="Variable">hasLoad1</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="921177187003522">
+                    <conditions>
+                        <condition id="1" name="On error" sid="431394666186145" type="AJAX">
+                            <param id="0" name="Tag">&quot;load2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="878741613110877" type="game2">
+                            <param id="0" name="Text">&quot;New Game&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="585480220013361" type="System">
+                            <param id="0" name="Variable">hasLoad2</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="502634132233563">
+                    <conditions>
+                        <condition id="1" name="On error" sid="867226521809959" type="AJAX">
+                            <param id="0" name="Tag">&quot;load3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="211546575332743" type="game3">
+                            <param id="0" name="Text">&quot;New Game&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="674522507109721" type="System">
+                            <param id="0" name="Variable">hasLoad3</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="409748566417356" title="deleteSlots">
+            <sub-events>
+                <event-block sid="259892090846157">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="312059086759459" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">deleteLoad1</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="926985646785272" type="deleteLoad1" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Delete file" sid="602311907812444" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder &amp;&quot;/saves/&quot;&amp;LOADSTATE1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="839672355752085" type="System">
+                            <param id="0" name="Variable">hasLoad1</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="661181148063600">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="937091033899046" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">deleteLoad2</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="498079378697305" type="deleteLoad2" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Delete file" sid="505633161351980" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder &amp;&quot;/saves/&quot;&amp;LOADSTATE2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="523120187105424" type="System">
+                            <param id="0" name="Variable">hasLoad2</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="426677876715055">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="295564348651072" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">deleteLoad3</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="876144771727683" type="deleteLoad3" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Delete file" sid="568646187588106" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder &amp;&quot;/saves/&quot;&amp;LOADSTATE3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="872069651843244" type="System">
+                            <param id="0" name="Variable">hasLoad3</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="798423855835935">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="115711995297341" type="System">
+                            <param id="0" name="Variable">hasLoad1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="266111762657763" type="deleteLoad1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="383857567761178">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="471706086923109" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="575774629116795" type="deleteLoad1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="438550227983650">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="464268702130857" type="System">
+                            <param id="0" name="Variable">hasLoad2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="384798776112127" type="deleteLoad2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="479933507543537">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="149278171399142" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="566120522710501" type="deleteLoad2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="108603976611156">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="863038188707539" type="System">
+                            <param id="0" name="Variable">hasLoad3</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="869349809628067" type="deleteLoad3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="911937658392980">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="976915372375172" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="905526431862776" type="deleteLoad3">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="702978775694287">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="394888680846200" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">callIntroAnimation</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="158757954389052" type="System">
+                    <param id="0" name="Layout">introCutScene1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="423714829055642">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="348168601396956" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">wholetoneBlog</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Go to URL" sid="834366049918703" type="Browser">
+                    <param id="0" name="URL">&quot;http://wholetonegames.blogspot.com/&quot;</param>
+                    <param id="1" name="Target">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

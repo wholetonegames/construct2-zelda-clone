@@ -1,0 +1,2313 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>moveModel</name>
+    <events>
+        <event-group description="" sid="1436273839116892" title="onLoadLayout">
+            <sub-events>
+                <event-block sid="8171403255991058">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="8999913017009215" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-33" name="Set layer parallax" sid="736744117146031" type="System">
+                            <param id="0" name="Layer">LAYERBG</param>
+                            <param id="1" name="Parallax X">100</param>
+                            <param id="2" name="Parallax Y">100</param>
+                        </action>
+                        <action id="-33" name="Set layer parallax" sid="5982833591936544" type="System">
+                            <param id="0" name="Layer">LAYERCHARA</param>
+                            <param id="1" name="Parallax X">100</param>
+                            <param id="2" name="Parallax Y">100</param>
+                        </action>
+                        <action id="-33" name="Set layer parallax" sid="2024154052531138" type="System">
+                            <param id="0" name="Layer">LAYERMENU</param>
+                            <param id="1" name="Parallax X">0</param>
+                            <param id="2" name="Parallax Y">0</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="224978686038164" type="doorsEast">
+                            <param id="0" name="Layer">LAYERCHARA</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="439271271447347" type="doorsNorth">
+                            <param id="0" name="Layer">LAYERCHARA</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="442016629507470" type="doorsSouth">
+                            <param id="0" name="Layer">LAYERCHARA</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="818212108847189" type="doorsWest">
+                            <param id="0" name="Layer">LAYERCHARA</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="404573290792139" type="doorsEast">
+                            <param id="0" name="X">RESOLUTION_WIDTH</param>
+                            <param id="1" name="Y">RESOLUTION_HEIGHT / 2</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="970213585953102" type="doorsWest">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">RESOLUTION_HEIGHT / 2</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="197080635087308" type="doorsSouth">
+                            <param id="0" name="X">RESOLUTION_WIDTH / 2</param>
+                            <param id="1" name="Y">RESOLUTION_HEIGHT</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="757043989202702" type="doorsNorth">
+                            <param id="0" name="X">RESOLUTION_WIDTH / 2</param>
+                            <param id="1" name="Y">0</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="150904353602266" type="doorsEast" />
+                        <action id="-24" name="Move to top" sid="631591763528674" type="doorsNorth" />
+                        <action id="-24" name="Move to top" sid="692436201645954" type="doorsWest" />
+                        <action id="-24" name="Move to top" sid="187005090003950" type="doorsSouth" />
+                        <action id="-25" name="Move to bottom" sid="331725561658108" type="conveyorE" />
+                        <action id="-25" name="Move to bottom" sid="303930796960005" type="conveyorN" />
+                        <action id="-25" name="Move to bottom" sid="514280559909240" type="conveyorS" />
+                        <action id="-25" name="Move to bottom" sid="217585290501718" type="conveyorW" />
+                        <action id="-5" name="Set width" sid="7258147911798318" type="gateN">
+                            <param id="0" name="Width">RESOLUTION_WIDTH</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="5677152774069025" type="gateS">
+                            <param id="0" name="Width">RESOLUTION_WIDTH</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="9287797216400557" type="gateW">
+                            <param id="0" name="Height">RESOLUTION_HEIGHT</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="4543464439423772" type="gateE">
+                            <param id="0" name="Height">RESOLUTION_HEIGHT</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="2338690273264884" type="gateE">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="9505678310742102" type="gateW">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6428845641517511" type="gateN">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="9277624191114885" type="gateS">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="7643394170398272" type="System">
+                            <param id="0" name="Object to create">menuBox_origin</param>
+                            <param id="1" name="Layer">LAYERMENU</param>
+                            <param id="2" name="X">16</param>
+                            <param id="3" name="Y">16</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="9106006599511462" type="System">
+                            <param id="0" name="Object to create">roomTransition</param>
+                            <param id="1" name="Layer">LAYERMENU</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="5137009302489604" type="roomTransition">
+                            <param id="0" name="Width">RESOLUTION_WIDTH</param>
+                            <param id="1" name="Height">RESOLUTION_WIDTH</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="2100404220295562">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6774960768929104" type="System">
+                                    <param id="0" name="Variable">dungeonLayoutName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;a&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="225689518651704" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="708267053100915" type="function">
+                                    <param id="0" name="Name">&quot;initPositionCentral&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="543288114576061" type="System">
+                                    <param id="0" name="Variable">dungeonLayoutName</param>
+                                    <param id="1" name="Value">&quot;a54&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="7828003489476913" type="System">
+                                    <param id="0" name="Variable">dungeonLevel</param>
+                                    <param id="1" name="Value">&quot;a&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5893195709707157" type="System">
+                                    <param id="0" name="Variable">dungeonX</param>
+                                    <param id="1" name="Value">5</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6442991375468879" type="System">
+                                    <param id="0" name="Variable">dungeonY</param>
+                                    <param id="1" name="Value">4</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="313407378531513" type="System">
+                                    <param id="0" name="Variable">dungeonMaxX</param>
+                                    <param id="1" name="Value">9</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="274490531263151" type="System">
+                                    <param id="0" name="Variable">dungeonMaxY</param>
+                                    <param id="1" name="Value">9</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="6391241026325794" type="System">
+                                    <param id="0" name="Object to create">player1lead</param>
+                                    <param id="1" name="Layer">layerChara</param>
+                                    <param id="2" name="X">startingPositionAX</param>
+                                    <param id="3" name="Y">startingPositionAY</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="4904616409135893" type="player1lead">
+                                    <param id="0" name="Angle">initialAngle</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="255029900719074" type="player1lead">
+                                    <param id="0" name="Animation">&quot;down&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="413862810343744" type="System">
+                                    <param id="0" name="Object to create">player12nd</param>
+                                    <param id="1" name="Layer">layerChara</param>
+                                    <param id="2" name="X">startingPositionBX</param>
+                                    <param id="3" name="Y">startingPositionBY</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="874721807187243" type="player12nd">
+                                    <param id="0" name="Pin to">player1lead</param>
+                                    <param id="1" name="Mode">3</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="894636960842791" type="System">
+                                    <param id="0" name="Object to create">player13rd</param>
+                                    <param id="1" name="Layer">layerChara</param>
+                                    <param id="2" name="X">startingPositionCX</param>
+                                    <param id="3" name="Y">startingPositionCY</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="155097289362981" type="player13rd">
+                                    <param id="0" name="Pin to">player12nd</param>
+                                    <param id="1" name="Mode">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1152638487690028">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="9506902729414929" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="3248896181570116" type="System">
+                                    <param id="0" name="Object to create">player1lead</param>
+                                    <param id="1" name="Layer">layerChara</param>
+                                    <param id="2" name="X">startingPositionAX</param>
+                                    <param id="3" name="Y">startingPositionAY</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="1051141194327688" type="player1lead">
+                                    <param id="0" name="Angle">initialAngle</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="431483905639283" type="player1lead">
+                                    <param id="0" name="Animation">&quot;down&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="634945195689714" type="System">
+                                    <param id="0" name="Object to create">player12nd</param>
+                                    <param id="1" name="Layer">layerChara</param>
+                                    <param id="2" name="X">startingPositionBX</param>
+                                    <param id="3" name="Y">startingPositionBY</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="449025713869141" type="player12nd">
+                                    <param id="0" name="Pin to">player1lead</param>
+                                    <param id="1" name="Mode">3</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="687788236673453" type="System">
+                                    <param id="0" name="Object to create">player13rd</param>
+                                    <param id="1" name="Layer">layerChara</param>
+                                    <param id="2" name="X">startingPositionCX</param>
+                                    <param id="3" name="Y">startingPositionCY</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="893480105647415" type="player13rd">
+                                    <param id="0" name="Pin to">player12nd</param>
+                                    <param id="1" name="Mode">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8072007047011434">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6972410440164843" type="System">
+                                    <param id="0" name="Variable">partyConfiguration</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">PARTY_SLAVE_SOLDIER</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="535116524566922" type="System">
+                                    <param id="0" name="Object to create">mrCicada</param>
+                                    <param id="1" name="Layer">LAYERCHARA</param>
+                                    <param id="2" name="X">player1lead.X</param>
+                                    <param id="3" name="Y">player1lead.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3283761377405195">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="8967671240212366" type="System">
+                                    <param id="0" name="Variable">partyConfiguration</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">PARTY_CICADA_SOLDIER</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="9747421572759959" type="System">
+                                    <param id="0" name="Object to create">msSlave</param>
+                                    <param id="1" name="Layer">LAYERCHARA</param>
+                                    <param id="2" name="X">player12nd.X</param>
+                                    <param id="3" name="Y">player12nd.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8286477439011854">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="711842818415514" type="System">
+                                    <param id="0" name="Variable">partyConfiguration</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">PARTY_CICADA_SLAVE</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="6963955441926577" type="System">
+                                    <param id="0" name="Object to create">msSoldier</param>
+                                    <param id="1" name="Layer">LAYERCHARA</param>
+                                    <param id="2" name="X">player13rd.X</param>
+                                    <param id="3" name="Y">player13rd.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="9042384268669662" title="room navigation">
+            <sub-events>
+                <event-block sid="9424387334314019">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="6227573120351104" type="doorN">
+                            <param id="0" name="Object">playerCharacter</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="8458040709028099" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="698770298711387" type="function">
+                            <param id="0" name="Name">&quot;goNorth&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1581612731806756">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="9187140435878726" type="doorS">
+                            <param id="0" name="Object">playerCharacter</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="9099867335025968" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="464711613887294" type="function">
+                            <param id="0" name="Name">&quot;goSouth&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3468565464049016">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="8094290180476044" type="doorW">
+                            <param id="0" name="Object">playerCharacter</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="5275728024148392" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="712395808867261" type="function">
+                            <param id="0" name="Name">&quot;goWest&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8989870912487429">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="7876869054199538" type="doorE">
+                            <param id="0" name="Object">playerCharacter</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="4130178350611527" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="207271236981525" type="function">
+                            <param id="0" name="Name">&quot;goEast&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="627084122823491">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="652981019484759" type="lockedDoorN">
+                            <param id="0" name="Object">playerCharacter</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="543133691713813" type="System" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="713010507868590" type="lockedDoorN">
+                            <param id="0" name="Instance variable">isShut</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="368279041058504" type="function">
+                            <param id="0" name="Name">&quot;goNorth&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="930878003983758">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="279450097244098" type="lockedDoorS">
+                            <param id="0" name="Object">playerCharacter</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="310130884663808" type="System" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="656795620796849" type="lockedDoorS">
+                            <param id="0" name="Instance variable">isShut</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="402388397460424" type="function">
+                            <param id="0" name="Name">&quot;goSouth&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="324247199330746">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="772566421825720" type="lockedDoorW">
+                            <param id="0" name="Object">playerCharacter</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="453155665577473" type="System" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="964563206395296" type="lockedDoorW">
+                            <param id="0" name="Instance variable">isShut</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="430987980925805" type="function">
+                            <param id="0" name="Name">&quot;goWest&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="313040261306062">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="489048652662809" type="lockedDoorE">
+                            <param id="0" name="Object">playerCharacter</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="412530277391057" type="System" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="223211434514104" type="lockedDoorE">
+                            <param id="0" name="Instance variable">isShut</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="616649738581109" type="function">
+                            <param id="0" name="Name">&quot;goEast&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="812189968067413">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="6946923468824349" type="gateN">
+                            <param id="0" name="Object">playerCharacter</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="4175138666110401" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="329846622595379" type="System">
+                            <param id="0" name="Variable">dungeonY</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="232275976834025" type="System">
+                            <param id="0" name="Variable">startingPositionAX</param>
+                            <param id="1" name="Value">partyX</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="315841554033739" type="System">
+                            <param id="0" name="Variable">startingPositionAY</param>
+                            <param id="1" name="Value">RESOLUTION_HEIGHT -  CHARA_DISTANCE * 3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="486158330154776" type="System">
+                            <param id="0" name="Variable">startingPositionBX</param>
+                            <param id="1" name="Value">partyX</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="999061312533738" type="System">
+                            <param id="0" name="Variable">startingPositionBY</param>
+                            <param id="1" name="Value">RESOLUTION_HEIGHT -  CHARA_DISTANCE * 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="414840077334271" type="System">
+                            <param id="0" name="Variable">startingPositionCX</param>
+                            <param id="1" name="Value">partyX</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="533380839700247" type="System">
+                            <param id="0" name="Variable">startingPositionCY</param>
+                            <param id="1" name="Value">RESOLUTION_HEIGHT -  CHARA_DISTANCE</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="891642437113773" type="System">
+                            <param id="0" name="Variable">initialAngle</param>
+                            <param id="1" name="Value">-90</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="275352021735212" type="System">
+                            <param id="0" name="Variable">preppingNewRoom</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6293579116901919">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="5612752456926622" type="gateS">
+                            <param id="0" name="Object">playerCharacter</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="3648007338929413" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="960153886727178" type="System">
+                            <param id="0" name="Variable">dungeonY</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="661541728264635" type="System">
+                            <param id="0" name="Variable">startingPositionAX</param>
+                            <param id="1" name="Value">partyX</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="704396006316440" type="System">
+                            <param id="0" name="Variable">startingPositionAY</param>
+                            <param id="1" name="Value">CHARA_DISTANCE * 3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="699396804959725" type="System">
+                            <param id="0" name="Variable">startingPositionBX</param>
+                            <param id="1" name="Value">partyX</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="796467567302161" type="System">
+                            <param id="0" name="Variable">startingPositionBY</param>
+                            <param id="1" name="Value">CHARA_DISTANCE * 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="365922940326217" type="System">
+                            <param id="0" name="Variable">startingPositionCX</param>
+                            <param id="1" name="Value">partyX</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="176482215851250" type="System">
+                            <param id="0" name="Variable">startingPositionCY</param>
+                            <param id="1" name="Value">CHARA_DISTANCE</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="914830401605784" type="System">
+                            <param id="0" name="Variable">initialAngle</param>
+                            <param id="1" name="Value">90</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="100411299534779" type="System">
+                            <param id="0" name="Variable">preppingNewRoom</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="815053396733442">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="5235063403474217" type="gateW">
+                            <param id="0" name="Object">playerCharacter</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="267947905316885" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="327332038170021" type="System">
+                            <param id="0" name="Variable">dungeonX</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="953478016003934" type="System">
+                            <param id="0" name="Variable">startingPositionAX</param>
+                            <param id="1" name="Value">RESOLUTION_WIDTH - CHARA_DISTANCE *3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="423692847425724" type="System">
+                            <param id="0" name="Variable">startingPositionAY</param>
+                            <param id="1" name="Value">partyY</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="942251795656199" type="System">
+                            <param id="0" name="Variable">startingPositionBX</param>
+                            <param id="1" name="Value">RESOLUTION_WIDTH - CHARA_DISTANCE *2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="994483862060702" type="System">
+                            <param id="0" name="Variable">startingPositionBY</param>
+                            <param id="1" name="Value">partyY</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="475338616729410" type="System">
+                            <param id="0" name="Variable">startingPositionCX</param>
+                            <param id="1" name="Value">RESOLUTION_WIDTH - CHARA_DISTANCE</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="164258501883900" type="System">
+                            <param id="0" name="Variable">startingPositionCY</param>
+                            <param id="1" name="Value">partyY</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="280011307430477" type="System">
+                            <param id="0" name="Variable">initialAngle</param>
+                            <param id="1" name="Value">180</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="363401864550548" type="System">
+                            <param id="0" name="Variable">preppingNewRoom</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="868081230061414">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="3906354978484177" type="gateE">
+                            <param id="0" name="Object">playerCharacter</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="6941504039092525" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="406028085737904" type="System">
+                            <param id="0" name="Variable">dungeonX</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="634318918867545" type="System">
+                            <param id="0" name="Variable">startingPositionAX</param>
+                            <param id="1" name="Value">CHARA_DISTANCE * 3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="780259948473537" type="System">
+                            <param id="0" name="Variable">startingPositionAY</param>
+                            <param id="1" name="Value">partyY</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="576783301511938" type="System">
+                            <param id="0" name="Variable">startingPositionBX</param>
+                            <param id="1" name="Value">CHARA_DISTANCE *2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="805183448833044" type="System">
+                            <param id="0" name="Variable">startingPositionBY</param>
+                            <param id="1" name="Value">partyY</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="888699582162233" type="System">
+                            <param id="0" name="Variable">startingPositionCX</param>
+                            <param id="1" name="Value">CHARA_DISTANCE</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="713591002018908" type="System">
+                            <param id="0" name="Variable">startingPositionCY</param>
+                            <param id="1" name="Value">partyY</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="944310124388256" type="System">
+                            <param id="0" name="Variable">initialAngle</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="457995334234457" type="System">
+                            <param id="0" name="Variable">preppingNewRoom</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="829894197196764">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="390791680303447" type="blueDoorN">
+                            <param id="0" name="Object">playerCharacter</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="726727216139379" type="System" />
+                        <condition id="-14" name="Compare variable" sid="827910359734596" type="System">
+                            <param id="0" name="Variable">currentDoorColor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="527033824045058" type="function">
+                            <param id="0" name="Name">&quot;goNorth&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="476157984684815">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="865139222592330" type="blueDoorS">
+                            <param id="0" name="Object">playerCharacter</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="993285351536052" type="System" />
+                        <condition id="-14" name="Compare variable" sid="843565024382550" type="System">
+                            <param id="0" name="Variable">currentDoorColor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="441221698962646" type="function">
+                            <param id="0" name="Name">&quot;goSouth&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="575951436267976">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="305646262417296" type="blueDoorW">
+                            <param id="0" name="Object">playerCharacter</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="785243739374828" type="System" />
+                        <condition id="-14" name="Compare variable" sid="438995752950816" type="System">
+                            <param id="0" name="Variable">currentDoorColor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="739221740170033" type="function">
+                            <param id="0" name="Name">&quot;goWest&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="759832833714271">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="519706863429941" type="blueDoorE">
+                            <param id="0" name="Object">playerCharacter</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="225704168901281" type="System" />
+                        <condition id="-14" name="Compare variable" sid="863335259721167" type="System">
+                            <param id="0" name="Variable">currentDoorColor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="891556569867733" type="function">
+                            <param id="0" name="Name">&quot;goEast&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="650499195102700">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="332065113205656" type="redDoorN">
+                            <param id="0" name="Object">playerCharacter</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="172032101038112" type="System" />
+                        <condition id="-14" name="Compare variable" sid="949143140552949" type="System">
+                            <param id="0" name="Variable">currentDoorColor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="243348800047375" type="function">
+                            <param id="0" name="Name">&quot;goNorth&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="735529592623948">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="770435504181790" type="redDoorS">
+                            <param id="0" name="Object">playerCharacter</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="692279883137612" type="System" />
+                        <condition id="-14" name="Compare variable" sid="962373436625821" type="System">
+                            <param id="0" name="Variable">currentDoorColor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="618205118449611" type="function">
+                            <param id="0" name="Name">&quot;goSouth&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="747060522009260">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="967890782352830" type="redDoorW">
+                            <param id="0" name="Object">playerCharacter</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="266161263208925" type="System" />
+                        <condition id="-14" name="Compare variable" sid="624655834413604" type="System">
+                            <param id="0" name="Variable">currentDoorColor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="406502707063001" type="function">
+                            <param id="0" name="Name">&quot;goWest&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="876684433442274">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="587556521124646" type="redDoorE">
+                            <param id="0" name="Object">playerCharacter</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="826630177914082" type="System" />
+                        <condition id="-14" name="Compare variable" sid="191250356154846" type="System">
+                            <param id="0" name="Variable">currentDoorColor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="773378059930044" type="function">
+                            <param id="0" name="Name">&quot;goEast&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Warps are not contiguous like other types of door and have their own mechanisms</comment>
+                <event-block sid="189897964574685">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="5497351284778529" type="warpN">
+                            <param id="0" name="Object">playerCharacter</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="8557102876575346" type="System" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7450984230293207" type="warpN">
+                            <param id="0" name="Instance variable">isShut</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="2744510946270926" type="System">
+                            <param id="0" name="Variable">dungeonLevel</param>
+                            <param id="1" name="Value">warpN.dungeonLevel</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="5511304019635461" type="System">
+                            <param id="0" name="Variable">dungeonX</param>
+                            <param id="1" name="Value">warpN.dungeonX</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2253988207385355" type="System">
+                            <param id="0" name="Variable">dungeonY</param>
+                            <param id="1" name="Value">warpN.dungeonY</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="395396932699068" type="System">
+                            <param id="0" name="Variable">dungeonMaxX</param>
+                            <param id="1" name="Value">warpN.dungeonMaxX</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9321743710190981" type="System">
+                            <param id="0" name="Variable">dungeonMaxY</param>
+                            <param id="1" name="Value">warpN.dungeonMaxY</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9651247491483437" type="System">
+                            <param id="0" name="Variable">startingPositionAX</param>
+                            <param id="1" name="Value">RESOLUTION_WIDTH / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3908438110136004" type="System">
+                            <param id="0" name="Variable">startingPositionAY</param>
+                            <param id="1" name="Value">RESOLUTION_HEIGHT -  CHARA_DISTANCE * 3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2905370625230221" type="System">
+                            <param id="0" name="Variable">startingPositionBX</param>
+                            <param id="1" name="Value">RESOLUTION_WIDTH / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="975935619683625" type="System">
+                            <param id="0" name="Variable">startingPositionBY</param>
+                            <param id="1" name="Value">RESOLUTION_HEIGHT -  CHARA_DISTANCE * 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6253237852818072" type="System">
+                            <param id="0" name="Variable">startingPositionCX</param>
+                            <param id="1" name="Value">RESOLUTION_WIDTH / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1866287169744318" type="System">
+                            <param id="0" name="Variable">startingPositionCY</param>
+                            <param id="1" name="Value">RESOLUTION_HEIGHT -  CHARA_DISTANCE</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8810184444187495" type="System">
+                            <param id="0" name="Variable">initialAngle</param>
+                            <param id="1" name="Value">-90</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="532859263202658" type="System">
+                            <param id="0" name="Variable">lastCheckpoint</param>
+                            <param id="1" name="Value">dungeonLevel &amp; dungeonX &amp; dungeonY</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8997822656453098" type="System">
+                            <param id="0" name="Variable">preppingNewRoom</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8276667005769759">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="6584361418373528" type="warpS">
+                            <param id="0" name="Object">playerCharacter</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="9811879468394752" type="System" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="961393152919214" type="warpS">
+                            <param id="0" name="Instance variable">isShut</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="6638285771827793" type="System">
+                            <param id="0" name="Variable">dungeonLevel</param>
+                            <param id="1" name="Value">warpS.dungeonLevel</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1438489353032727" type="System">
+                            <param id="0" name="Variable">dungeonX</param>
+                            <param id="1" name="Value">warpS.dungeonX</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6684993384282867" type="System">
+                            <param id="0" name="Variable">dungeonY</param>
+                            <param id="1" name="Value">warpS.dungeonY</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9558443706998649" type="System">
+                            <param id="0" name="Variable">dungeonMaxX</param>
+                            <param id="1" name="Value">warpS.dungeonMaxX</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8153571163445019" type="System">
+                            <param id="0" name="Variable">dungeonMaxY</param>
+                            <param id="1" name="Value">warpS.dungeonMaxY</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3805423855055684" type="System">
+                            <param id="0" name="Variable">startingPositionAX</param>
+                            <param id="1" name="Value">RESOLUTION_WIDTH / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1847871289864805" type="System">
+                            <param id="0" name="Variable">startingPositionAY</param>
+                            <param id="1" name="Value">CHARA_DISTANCE * 3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="5827111086934638" type="System">
+                            <param id="0" name="Variable">startingPositionBX</param>
+                            <param id="1" name="Value">RESOLUTION_WIDTH / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="275590272067534" type="System">
+                            <param id="0" name="Variable">startingPositionBY</param>
+                            <param id="1" name="Value">CHARA_DISTANCE * 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7840806790621828" type="System">
+                            <param id="0" name="Variable">startingPositionCX</param>
+                            <param id="1" name="Value">RESOLUTION_WIDTH / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8269767860977339" type="System">
+                            <param id="0" name="Variable">startingPositionCY</param>
+                            <param id="1" name="Value">CHARA_DISTANCE</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="5397635003753438" type="System">
+                            <param id="0" name="Variable">initialAngle</param>
+                            <param id="1" name="Value">90</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="626565150219813" type="System">
+                            <param id="0" name="Variable">lastCheckpoint</param>
+                            <param id="1" name="Value">dungeonLevel &amp; dungeonX &amp; dungeonY</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2545387012585074" type="System">
+                            <param id="0" name="Variable">preppingNewRoom</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6740114501009487">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="8110533860660784" type="warpW">
+                            <param id="0" name="Object">playerCharacter</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="1887409184604867" type="System" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5382801889824572" type="warpW">
+                            <param id="0" name="Instance variable">isShut</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="7503368668371599" type="System">
+                            <param id="0" name="Variable">dungeonLevel</param>
+                            <param id="1" name="Value">warpW.dungeonLevel</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1051158249701642" type="System">
+                            <param id="0" name="Variable">dungeonX</param>
+                            <param id="1" name="Value">warpW.dungeonX</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3713030006756795" type="System">
+                            <param id="0" name="Variable">dungeonY</param>
+                            <param id="1" name="Value">warpW.dungeonY</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="4400309984810614" type="System">
+                            <param id="0" name="Variable">dungeonMaxX</param>
+                            <param id="1" name="Value">warpW.dungeonMaxX</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8321615103343326" type="System">
+                            <param id="0" name="Variable">dungeonMaxY</param>
+                            <param id="1" name="Value">warpW.dungeonMaxY</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2936647482877923" type="System">
+                            <param id="0" name="Variable">startingPositionAX</param>
+                            <param id="1" name="Value">RESOLUTION_WIDTH - CHARA_DISTANCE *3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7198625220830228" type="System">
+                            <param id="0" name="Variable">startingPositionAY</param>
+                            <param id="1" name="Value">RESOLUTION_HEIGHT / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1522526128292091" type="System">
+                            <param id="0" name="Variable">startingPositionBX</param>
+                            <param id="1" name="Value">RESOLUTION_WIDTH - CHARA_DISTANCE *2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="422388041492707" type="System">
+                            <param id="0" name="Variable">startingPositionBY</param>
+                            <param id="1" name="Value">RESOLUTION_HEIGHT / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="689488695026886" type="System">
+                            <param id="0" name="Variable">startingPositionCX</param>
+                            <param id="1" name="Value">RESOLUTION_WIDTH - CHARA_DISTANCE</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1715406280128312" type="System">
+                            <param id="0" name="Variable">startingPositionCY</param>
+                            <param id="1" name="Value">RESOLUTION_HEIGHT / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="5303881376606086" type="System">
+                            <param id="0" name="Variable">initialAngle</param>
+                            <param id="1" name="Value">180</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="337068421186605" type="System">
+                            <param id="0" name="Variable">lastCheckpoint</param>
+                            <param id="1" name="Value">dungeonLevel &amp; dungeonX &amp; dungeonY</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2750445068674625" type="System">
+                            <param id="0" name="Variable">preppingNewRoom</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7887852206620141">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="5805689373429624" type="warpE">
+                            <param id="0" name="Object">playerCharacter</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="6416839572486225" type="System" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3490848060523601" type="warpE">
+                            <param id="0" name="Instance variable">isShut</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="3702207172888446" type="System">
+                            <param id="0" name="Variable">dungeonLevel</param>
+                            <param id="1" name="Value">warpE.dungeonLevel</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7444975292231167" type="System">
+                            <param id="0" name="Variable">dungeonX</param>
+                            <param id="1" name="Value">warpE.dungeonX</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8206675027710346" type="System">
+                            <param id="0" name="Variable">dungeonY</param>
+                            <param id="1" name="Value">warpE.dungeonY</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7862630587773561" type="System">
+                            <param id="0" name="Variable">dungeonMaxX</param>
+                            <param id="1" name="Value">warpE.dungeonMaxX</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8504691280361792" type="System">
+                            <param id="0" name="Variable">dungeonMaxY</param>
+                            <param id="1" name="Value">warpE.dungeonMaxY</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6390072092339237" type="System">
+                            <param id="0" name="Variable">startingPositionAX</param>
+                            <param id="1" name="Value">CHARA_DISTANCE * 3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="4086469037870817" type="System">
+                            <param id="0" name="Variable">startingPositionAY</param>
+                            <param id="1" name="Value">RESOLUTION_HEIGHT / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3002714307612782" type="System">
+                            <param id="0" name="Variable">startingPositionBX</param>
+                            <param id="1" name="Value">CHARA_DISTANCE *2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8727037081790373" type="System">
+                            <param id="0" name="Variable">startingPositionBY</param>
+                            <param id="1" name="Value">RESOLUTION_HEIGHT / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9545759437653792" type="System">
+                            <param id="0" name="Variable">startingPositionCX</param>
+                            <param id="1" name="Value">CHARA_DISTANCE</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3145948574325839" type="System">
+                            <param id="0" name="Variable">startingPositionCY</param>
+                            <param id="1" name="Value">RESOLUTION_HEIGHT / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="4589443264175878" type="System">
+                            <param id="0" name="Variable">initialAngle</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="310376688725596" type="System">
+                            <param id="0" name="Variable">lastCheckpoint</param>
+                            <param id="1" name="Value">dungeonLevel &amp; dungeonX &amp; dungeonY</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="33080171337414" type="System">
+                            <param id="0" name="Variable">preppingNewRoom</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="114539905666498" title="adjacentRoomsMovement">
+            <sub-events>
+                <event-block sid="740251214257546">
+                    <conditions>
+                        <condition id="0" name="On function" sid="949712345063613" type="function">
+                            <param id="0" name="Name">&quot;initPositionCentral&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="354111557321802" type="System">
+                            <param id="0" name="Variable">startingPositionAX</param>
+                            <param id="1" name="Value">RESOLUTION_WIDTH / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="333724373172619" type="System">
+                            <param id="0" name="Variable">startingPositionAY</param>
+                            <param id="1" name="Value">RESOLUTION_HEIGHT  - CHARA_DISTANCE * 3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="776319336548889" type="System">
+                            <param id="0" name="Variable">startingPositionBX</param>
+                            <param id="1" name="Value">RESOLUTION_WIDTH / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="393435073651150" type="System">
+                            <param id="0" name="Variable">startingPositionBY</param>
+                            <param id="1" name="Value">RESOLUTION_HEIGHT  - CHARA_DISTANCE * 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="395343909019153" type="System">
+                            <param id="0" name="Variable">startingPositionCX</param>
+                            <param id="1" name="Value">RESOLUTION_WIDTH / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="129719117769402" type="System">
+                            <param id="0" name="Variable">startingPositionCY</param>
+                            <param id="1" name="Value">RESOLUTION_HEIGHT  - CHARA_DISTANCE</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="382376460444636" type="System">
+                            <param id="0" name="Variable">initialAngle</param>
+                            <param id="1" name="Value">-90</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="486761698184120">
+                    <conditions>
+                        <condition id="0" name="On function" sid="343025209101868" type="function">
+                            <param id="0" name="Name">&quot;goNorth&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="149143498946661" type="System">
+                            <param id="0" name="Variable">dungeonY</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="726670672896754" type="System">
+                            <param id="0" name="Variable">startingPositionAX</param>
+                            <param id="1" name="Value">RESOLUTION_WIDTH / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="445665012087020" type="System">
+                            <param id="0" name="Variable">startingPositionAY</param>
+                            <param id="1" name="Value">RESOLUTION_HEIGHT -  CHARA_DISTANCE * 3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="946658972202100" type="System">
+                            <param id="0" name="Variable">startingPositionBX</param>
+                            <param id="1" name="Value">RESOLUTION_WIDTH / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="452986835318035" type="System">
+                            <param id="0" name="Variable">startingPositionBY</param>
+                            <param id="1" name="Value">RESOLUTION_HEIGHT -  CHARA_DISTANCE * 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="742380216780792" type="System">
+                            <param id="0" name="Variable">startingPositionCX</param>
+                            <param id="1" name="Value">RESOLUTION_WIDTH / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="858801150374945" type="System">
+                            <param id="0" name="Variable">startingPositionCY</param>
+                            <param id="1" name="Value">RESOLUTION_HEIGHT -  CHARA_DISTANCE</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="370535655209286" type="System">
+                            <param id="0" name="Variable">initialAngle</param>
+                            <param id="1" name="Value">-90</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="771941184888718" type="System">
+                            <param id="0" name="Variable">preppingNewRoom</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="856731561034453">
+                    <conditions>
+                        <condition id="0" name="On function" sid="766129850471037" type="function">
+                            <param id="0" name="Name">&quot;goSouth&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="780788316808125" type="System">
+                            <param id="0" name="Variable">dungeonY</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="349888904308687" type="System">
+                            <param id="0" name="Variable">startingPositionAX</param>
+                            <param id="1" name="Value">RESOLUTION_WIDTH / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="495454567853852" type="System">
+                            <param id="0" name="Variable">startingPositionAY</param>
+                            <param id="1" name="Value">CHARA_DISTANCE * 3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="230936088218848" type="System">
+                            <param id="0" name="Variable">startingPositionBX</param>
+                            <param id="1" name="Value">RESOLUTION_WIDTH / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="990757564564105" type="System">
+                            <param id="0" name="Variable">startingPositionBY</param>
+                            <param id="1" name="Value">CHARA_DISTANCE * 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="390940843664385" type="System">
+                            <param id="0" name="Variable">startingPositionCX</param>
+                            <param id="1" name="Value">RESOLUTION_WIDTH / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="982694298773862" type="System">
+                            <param id="0" name="Variable">startingPositionCY</param>
+                            <param id="1" name="Value">CHARA_DISTANCE</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="210837830860275" type="System">
+                            <param id="0" name="Variable">initialAngle</param>
+                            <param id="1" name="Value">90</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="191916991014400" type="System">
+                            <param id="0" name="Variable">preppingNewRoom</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="484576674819877">
+                    <conditions>
+                        <condition id="0" name="On function" sid="626288120884248" type="function">
+                            <param id="0" name="Name">&quot;goEast&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="301500051637132" type="System">
+                            <param id="0" name="Variable">dungeonX</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="478602094290216" type="System">
+                            <param id="0" name="Variable">startingPositionAX</param>
+                            <param id="1" name="Value">CHARA_DISTANCE * 3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="303890547166146" type="System">
+                            <param id="0" name="Variable">startingPositionAY</param>
+                            <param id="1" name="Value">RESOLUTION_HEIGHT / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="360280129662770" type="System">
+                            <param id="0" name="Variable">startingPositionBX</param>
+                            <param id="1" name="Value">CHARA_DISTANCE *2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="420107396129761" type="System">
+                            <param id="0" name="Variable">startingPositionBY</param>
+                            <param id="1" name="Value">RESOLUTION_HEIGHT / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="750888807379701" type="System">
+                            <param id="0" name="Variable">startingPositionCX</param>
+                            <param id="1" name="Value">CHARA_DISTANCE</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="463870559912869" type="System">
+                            <param id="0" name="Variable">startingPositionCY</param>
+                            <param id="1" name="Value">RESOLUTION_HEIGHT / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="269561379940233" type="System">
+                            <param id="0" name="Variable">initialAngle</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="315874104252694" type="System">
+                            <param id="0" name="Variable">preppingNewRoom</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="889073116031605">
+                    <conditions>
+                        <condition id="0" name="On function" sid="337324334240173" type="function">
+                            <param id="0" name="Name">&quot;goWest&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="864586542311314" type="System">
+                            <param id="0" name="Variable">dungeonX</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="172144378364579" type="System">
+                            <param id="0" name="Variable">startingPositionAX</param>
+                            <param id="1" name="Value">RESOLUTION_WIDTH - CHARA_DISTANCE *3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="699916713126313" type="System">
+                            <param id="0" name="Variable">startingPositionAY</param>
+                            <param id="1" name="Value">RESOLUTION_HEIGHT / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="212213206088671" type="System">
+                            <param id="0" name="Variable">startingPositionBX</param>
+                            <param id="1" name="Value">RESOLUTION_WIDTH - CHARA_DISTANCE *2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="446891587114771" type="System">
+                            <param id="0" name="Variable">startingPositionBY</param>
+                            <param id="1" name="Value">RESOLUTION_HEIGHT / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="792648627943041" type="System">
+                            <param id="0" name="Variable">startingPositionCX</param>
+                            <param id="1" name="Value">RESOLUTION_WIDTH - CHARA_DISTANCE</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="387599566111721" type="System">
+                            <param id="0" name="Variable">startingPositionCY</param>
+                            <param id="1" name="Value">RESOLUTION_HEIGHT / 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="758450455123601" type="System">
+                            <param id="0" name="Variable">initialAngle</param>
+                            <param id="1" name="Value">180</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="480597106399191" type="System">
+                            <param id="0" name="Variable">preppingNewRoom</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="5677704367403368" title="room_transition">
+            <sub-events>
+                <event-block sid="6056758773879906">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2794823447348272" type="System">
+                            <param id="0" name="Variable">dungeonX</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="4418210450574317" type="System">
+                            <param id="0" name="Variable">dungeonX</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="190046605167487">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="850526829944013" type="System">
+                            <param id="0" name="Variable">dungeonX</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">dungeonMaxX</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="2340431994716956" type="System">
+                            <param id="0" name="Variable">dungeonX</param>
+                            <param id="1" name="Value">dungeonMaxX</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6234865160487273">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3736407215318417" type="System">
+                            <param id="0" name="Variable">dungeonY</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="1134579361861001" type="System">
+                            <param id="0" name="Variable">dungeonY</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4950913874768618">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4733084547856675" type="System">
+                            <param id="0" name="Variable">dungeonY</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">dungeonMaxY</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="4815349003478531" type="System">
+                            <param id="0" name="Variable">dungeonY</param>
+                            <param id="1" name="Value">dungeonMaxY</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="317994299031005">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3634771882014184" type="System">
+                            <param id="0" name="Variable">preppingNewRoom</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5037449264749673" type="System">
+                            <param id="0" name="Variable">dungeonLayoutName</param>
+                            <param id="1" name="Value">dungeonLevel &amp; dungeonX &amp; dungeonY</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7552336078207326" type="System">
+                            <param id="0" name="Variable">preppingNewRoom</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8956955413006886" type="System">
+                            <param id="0" name="Variable">goingToNewRoom</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7217116528818529">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="5943986537903705" type="System">
+                            <param id="0" name="Variable">goingToNewRoom</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="9102455292003454" type="System">
+                            <param id="0" name="Object to create">roomTransition</param>
+                            <param id="1" name="Layer">LAYERMENU</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="8025889750538803" type="roomTransition">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="7569016202450935" type="roomTransition">
+                            <param id="0" name="Width">OriginalWindowWidth</param>
+                            <param id="1" name="Height">OriginalWindowHeight</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1029605690471571">
+                            <conditions>
+                                <condition id="-10" name="Compare opacity" sid="850856024963429" type="roomTransition">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Opacity">1</param>
+                                </condition>
+                                <condition id="-6" name="Every X seconds" sid="5725602908642417" type="System">
+                                    <param id="0" name="Interval (seconds)">0.01</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="8955599790354344" type="roomTransition">
+                                    <param id="0" name="Opacity">roomTransition.Opacity  + 5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7757325866846462">
+                            <conditions>
+                                <condition id="-10" name="Compare opacity" sid="1712111232565348" type="roomTransition">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Opacity">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7456017781463701" type="System">
+                                    <param id="0" name="Variable">goingToNewRoom</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-25" name="Go to layout (by name)" sid="5339704152935457" type="System">
+                                    <param id="0" name="Layout">dungeonLayoutName</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="696666961510280">
+                    <conditions>
+                        <condition id="-10" name="Compare opacity" sid="452613495163390" type="roomTransition">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Opacity">0</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="977809787302463" type="System">
+                            <param id="0" name="Interval (seconds)">0.01</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="137743974809703" type="roomTransition">
+                            <param id="0" name="Opacity">roomTransition.Opacity - 5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="385177135232142">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="885558245305911" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="472815783815247" type="roomTransition" />
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="982864992909254">
+                    <conditions>
+                        <condition id="-10" name="Compare opacity" sid="431842392379833" type="roomTransition">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Opacity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="577145471702311" type="roomTransition" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="3052606840793722" title="doorConditions">
+            <sub-events>
+                <event-block sid="9131114690077488">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="6924402301297726" type="closedWarp">
+                            <param id="0" name="Object">bombSmoke</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="987644816172915" type="closedWarp">
+                            <param id="0" name="Instance variable">isBombable</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="80032963437155" type="closedWarp">
+                            <param id="0" name="Instance variable">isShut</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="906089789078102">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="713439336793705" type="closedWarp">
+                            <param id="0" name="Instance variable">isShut</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="424164134583723" type="closedWarp">
+                            <param id="0" name="Animation">&quot;closed&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="235654333046793">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="367759172293207" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="982521939187075" type="closedWarp">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3686853357650293">
+                    <conditions>
+                        <condition id="-4" inverted="1" name="Is outside layout" sid="4225025799697927" type="enemyAttacker" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="893809664477427" type="doorClosedType">
+                            <param id="0" name="Instance variable">isShut</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="664345566295754" type="doorClosedType">
+                            <param id="0" name="Animation">&quot;closed&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9801514480016314">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="4956266269378486" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="791656060371376" type="doorClosedType">
+                            <param id="0" name="Instance variable">isShut</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="625445101880816" type="doorClosedType">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>door colors: 0-red; 1-blue;</comment>
+                <event-block sid="487933308095148">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="292545657095401" type="System">
+                            <param id="0" name="Variable">currentDoorColor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="659996774045178" type="doorsRed">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="417421271917713">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="291754517521579" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="989640749804204" type="doorsRed">
+                            <param id="0" name="Animation">&quot;closed&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="940471036164548">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="514166877058577" type="System">
+                            <param id="0" name="Variable">currentDoorColor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="998033795890224" type="doorsBlue">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="614912779404823">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="945698381673904" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="314740725772359" type="doorsBlue">
+                            <param id="0" name="Animation">&quot;closed&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="5072744449698719" title="Player1Movement">
+            <sub-events>
+                <event-block sid="5383054757102436">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="9291766311689157" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-8" name="Set angle" sid="2899001746637963" type="player12nd">
+                            <param id="0" name="Angle">player1lead.Angle</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="6075522800416827" type="player13rd">
+                            <param id="0" name="Angle">player12nd.Angle</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7954433601279641" type="System">
+                            <param id="0" name="Variable">partyX</param>
+                            <param id="1" name="Value">player1lead.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9314566926722234" type="System">
+                            <param id="0" name="Variable">partyY</param>
+                            <param id="1" name="Value">player1lead.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4530031621364468">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8414979531525687" type="System">
+                            <param id="0" name="Variable">PauseGame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="6387432941866452" type="System">
+                            <param id="0" name="Variable">partyConfiguration</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">PARTY_OF_NONE</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="7043699026508594" type="System">
+                            <param id="0" name="Variable">attacked_Cicada</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="4515723580800685" type="System">
+                            <param id="0" name="Variable">attacked_Slave</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="1514979687253851" type="System">
+                            <param id="0" name="Variable">attacked_Soldier</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6597396159128364">
+                            <conditions>
+                                <condition id="10" inverted="1" name="Is button index down" sid="2919586288875988" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button index">player1lead.buttonAction</param>
+                                </condition>
+                                <condition id="10" inverted="1" name="Is button index down" sid="5716892934057544" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button index">player1lead.buttonItem</param>
+                                </condition>
+                                <condition id="5" inverted="1" name="Key code is down" sid="315206575218048" type="Keyboard">
+                                    <param id="0" name="Keycode">player1lead.buttonAction</param>
+                                </condition>
+                                <condition id="5" inverted="1" name="Key code is down" sid="418414684610642" type="Keyboard">
+                                    <param id="0" name="Keycode">player1lead.buttonItem</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="969426997359802" type="heroSword">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block any="1" sid="6643025489531144">
+                                    <conditions>
+                                        <condition id="5" name="Key code is down" sid="9791233059502487" type="Keyboard">
+                                            <param id="0" name="Keycode">player1lead.buttonLeft</param>
+                                        </condition>
+                                        <condition id="10" name="Is button index down" sid="5765468851182595" type="Gamepad">
+                                            <param id="0" name="Gamepad">0</param>
+                                            <param id="1" name="Button index">player1lead.buttonLeft</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="781795636558271" type="player1lead">
+                                            <param id="0" name="Animation">&quot;left&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="5825612788068817">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="2179723321755364" type="System">
+                                                    <param id="0" name="Variable">partyLead</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">CICADA</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="7046392920951086" type="System">
+                                                    <param id="0" name="Variable">previousAnimationName</param>
+                                                    <param id="1" name="Value">mrCicada.AnimationName</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="3012094941215287">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="1476376178344588" type="System">
+                                                    <param id="0" name="Variable">partyLead</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">SLAVE</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="3515588752925741" type="System">
+                                                    <param id="0" name="Variable">previousAnimationName</param>
+                                                    <param id="1" name="Value">msSlave.AnimationName</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="4493146842196221">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="7713348956272326" type="System">
+                                                    <param id="0" name="Variable">partyLead</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">SOLDIER</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="2091671515917801" type="System">
+                                                    <param id="0" name="Variable">previousAnimationName</param>
+                                                    <param id="1" name="Value">msSoldier.AnimationName</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="605927319996335">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="305594714878957" type="System">
+                                                    <param id="0" name="First value">player1lead.Angle</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">180</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="2102685312943581" type="player1lead">
+                                                    <param id="0" name="Control">0</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="4511421480995664" type="playerAvatars">
+                                                    <param id="0" name="Animation">&quot;walkLeft&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="567822530732881">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="507324211122393" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-8" name="Set angle" sid="4830557105606001" type="player1lead">
+                                                    <param id="0" name="Angle">180</param>
+                                                </action>
+                                                <action behavior="8Direction" id="2" name="Set ignoring input" sid="306070315997466" type="player1lead">
+                                                    <param id="0" name="Input">1</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="953649452879299" type="System">
+                                                    <param id="0" name="Seconds">0.05</param>
+                                                </action>
+                                                <action behavior="8Direction" id="2" name="Set ignoring input" sid="711569224547479" type="player1lead">
+                                                    <param id="0" name="Input">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block any="1" sid="3285014657891411">
+                                    <conditions>
+                                        <condition id="5" name="Key code is down" sid="2482739766412498" type="Keyboard">
+                                            <param id="0" name="Keycode">player1lead.buttonRight</param>
+                                        </condition>
+                                        <condition id="10" name="Is button index down" sid="254188231011017" type="Gamepad">
+                                            <param id="0" name="Gamepad">0</param>
+                                            <param id="1" name="Button index">player1lead.buttonRight</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="757186020420658" type="player1lead">
+                                            <param id="0" name="Animation">&quot;right&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="467863002391631">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="563476823463966" type="System">
+                                                    <param id="0" name="First value">player1lead.Angle</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="309212206374277" type="player1lead">
+                                                    <param id="0" name="Control">1</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="533379887601205" type="playerAvatars">
+                                                    <param id="0" name="Animation">&quot;walkRight&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="993042792240359">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="780017194813023" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-8" name="Set angle" sid="844051064805537" type="player1lead">
+                                                    <param id="0" name="Angle">0</param>
+                                                </action>
+                                                <action behavior="8Direction" id="2" name="Set ignoring input" sid="784863797528064" type="player1lead">
+                                                    <param id="0" name="Input">1</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="401456055733766" type="System">
+                                                    <param id="0" name="Seconds">0.05</param>
+                                                </action>
+                                                <action behavior="8Direction" id="2" name="Set ignoring input" sid="135139561501701" type="player1lead">
+                                                    <param id="0" name="Input">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="1373219322573171">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="8348463481847995" type="System">
+                                                    <param id="0" name="Variable">partyLead</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">CICADA</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="523801740777535" type="System">
+                                                    <param id="0" name="Variable">previousAnimationName</param>
+                                                    <param id="1" name="Value">mrCicada.AnimationName</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="748880042846575">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="5682217462376374" type="System">
+                                                    <param id="0" name="Variable">partyLead</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">SLAVE</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="727499054476381" type="System">
+                                                    <param id="0" name="Variable">previousAnimationName</param>
+                                                    <param id="1" name="Value">msSlave.AnimationName</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="6663351966982087">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="6246591587187999" type="System">
+                                                    <param id="0" name="Variable">partyLead</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">SOLDIER</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="8227945324216011" type="System">
+                                                    <param id="0" name="Variable">previousAnimationName</param>
+                                                    <param id="1" name="Value">msSoldier.AnimationName</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block any="1" sid="8734649383786776">
+                                    <conditions>
+                                        <condition id="5" name="Key code is down" sid="5983729706411024" type="Keyboard">
+                                            <param id="0" name="Keycode">player1lead.buttonDown</param>
+                                        </condition>
+                                        <condition id="10" name="Is button index down" sid="6338988738555252" type="Gamepad">
+                                            <param id="0" name="Gamepad">0</param>
+                                            <param id="1" name="Button index">player1lead.buttonDown</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="906052680785517" type="player1lead">
+                                            <param id="0" name="Animation">&quot;down&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="3533989594245364">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="7444331372394926" type="System">
+                                                    <param id="0" name="Variable">partyLead</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">CICADA</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="175504888183295" type="System">
+                                                    <param id="0" name="Variable">previousAnimationName</param>
+                                                    <param id="1" name="Value">mrCicada.AnimationName</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="6810693357655296">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="8226480296084558" type="System">
+                                                    <param id="0" name="Variable">partyLead</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">SLAVE</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="533879296659648" type="System">
+                                                    <param id="0" name="Variable">previousAnimationName</param>
+                                                    <param id="1" name="Value">msSlave.AnimationName</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="1258766603556472">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="5798338332286455" type="System">
+                                                    <param id="0" name="Variable">partyLead</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">SOLDIER</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="4856735760741283" type="System">
+                                                    <param id="0" name="Variable">previousAnimationName</param>
+                                                    <param id="1" name="Value">msSoldier.AnimationName</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="270756001809685">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="609954067315999" type="System">
+                                                    <param id="0" name="First value">player1lead.Angle</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">90</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="480713937246022" type="player1lead">
+                                                    <param id="0" name="Control">3</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="762397823528016" type="playerAvatars">
+                                                    <param id="0" name="Animation">&quot;walkDown&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="545852077547547">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="508641073410123" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-8" name="Set angle" sid="980382867722657" type="player1lead">
+                                                    <param id="0" name="Angle">90</param>
+                                                </action>
+                                                <action behavior="8Direction" id="2" name="Set ignoring input" sid="222774056320462" type="player1lead">
+                                                    <param id="0" name="Input">1</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="880153161496842" type="System">
+                                                    <param id="0" name="Seconds">0.05</param>
+                                                </action>
+                                                <action behavior="8Direction" id="2" name="Set ignoring input" sid="222532544271043" type="player1lead">
+                                                    <param id="0" name="Input">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block any="1" sid="8266458640978468">
+                                    <conditions>
+                                        <condition id="5" name="Key code is down" sid="3313805759133591" type="Keyboard">
+                                            <param id="0" name="Keycode">player1lead.buttonUp</param>
+                                        </condition>
+                                        <condition id="10" name="Is button index down" sid="3950614212779105" type="Gamepad">
+                                            <param id="0" name="Gamepad">0</param>
+                                            <param id="1" name="Button index">player1lead.buttonUp</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="390471196648432" type="player1lead">
+                                            <param id="0" name="Animation">&quot;up&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="5241919785443568">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="4071006431213848" type="System">
+                                                    <param id="0" name="Variable">partyLead</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">CICADA</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="815629678219719" type="System">
+                                                    <param id="0" name="Variable">previousAnimationName</param>
+                                                    <param id="1" name="Value">mrCicada.AnimationName</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="3032378188918536">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="9941904981441195" type="System">
+                                                    <param id="0" name="Variable">partyLead</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">SLAVE</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="2742801308689063" type="System">
+                                                    <param id="0" name="Variable">previousAnimationName</param>
+                                                    <param id="1" name="Value">msSlave.AnimationName</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="9117274233815049">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="7289084142686111" type="System">
+                                                    <param id="0" name="Variable">partyLead</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">SOLDIER</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="7539510751407178" type="System">
+                                                    <param id="0" name="Variable">previousAnimationName</param>
+                                                    <param id="1" name="Value">msSoldier.AnimationName</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="477350919676173">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="167544663644941" type="System">
+                                                    <param id="0" name="First value">player1lead.Angle</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">270</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="586803005543078" type="player1lead">
+                                                    <param id="0" name="Control">2</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="8131711488658756" type="playerAvatars">
+                                                    <param id="0" name="Animation">&quot;walkUp&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="708160632268405">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="897898651878373" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-8" name="Set angle" sid="4976755412730198" type="player1lead">
+                                                    <param id="0" name="Angle">-90</param>
+                                                </action>
+                                                <action behavior="8Direction" id="2" name="Set ignoring input" sid="746995444831239" type="player1lead">
+                                                    <param id="0" name="Input">1</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="155840526205941" type="System">
+                                                    <param id="0" name="Seconds">0.05</param>
+                                                </action>
+                                                <action behavior="8Direction" id="2" name="Set ignoring input" sid="801628604047227" type="player1lead">
+                                                    <param id="0" name="Input">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="6089372855803901">
+                                    <conditions>
+                                        <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="3117731355881976" type="player1lead" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="3758527059116868" type="playerAvatars">
+                                            <param id="0" name="Frame number">animationRestingFrame</param>
+                                        </action>
+                                        <action id="2" name="Stop" sid="9126848126215385" type="playerAvatars" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="3671300845804691" title="player1SpriteSynch">
+            <sub-events>
+                <event-block sid="5904054832547567">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1432446280137309" type="System">
+                            <param id="0" name="Variable">partyLead</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">CICADA</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="4057851673154422" type="mrCicada">
+                            <param id="0" name="Object">player1lead</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5216105735859674">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6254140385173672" type="System">
+                            <param id="0" name="Variable">partyLead</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">CICADA</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2872677484320135">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7127803094986964" type="System">
+                                    <param id="0" name="Variable">partyConfiguration</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">PARTY_OF_3</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="8623370035125671">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="890429137959864" type="System">
+                                            <param id="0" name="Variable">partyLead</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">SLAVE</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-4" name="Set position to another object" sid="4520712948024532" type="mrCicada">
+                                            <param id="0" name="Object">player13rd</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="551624651306395">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="6384024869037406" type="System">
+                                            <param id="0" name="Variable">partyLead</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">SOLDIER</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-4" name="Set position to another object" sid="8105436649202112" type="mrCicada">
+                                            <param id="0" name="Object">player12nd</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block any="1" sid="8249228759362524">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7118974853017072" type="System">
+                                    <param id="0" name="Variable">partyConfiguration</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">PARTY_CICADA_SLAVE</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="283122241252240" type="System">
+                                    <param id="0" name="Variable">partyConfiguration</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">PARTY_CICADA_SOLDIER</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="3437463037068918" type="mrCicada">
+                                    <param id="0" name="Object">player12nd</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8236841318604648">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="9896134161259635" type="System">
+                            <param id="0" name="Variable">partyLead</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">SLAVE</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="9148526133896959" type="msSlave">
+                            <param id="0" name="Object">player1lead</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7036010528844318">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3222889570694636" type="System">
+                            <param id="0" name="Variable">partyLead</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">SLAVE</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7769413049662171">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="448689070274891" type="System">
+                                    <param id="0" name="Variable">partyConfiguration</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">PARTY_OF_3</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="6134215503977225">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="1893449461809416" type="System">
+                                            <param id="0" name="Variable">partyLead</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">SOLDIER</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-4" name="Set position to another object" sid="6234937800704167" type="msSlave">
+                                            <param id="0" name="Object">player13rd</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6516422993713016">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="7648961627104192" type="System">
+                                            <param id="0" name="Variable">partyLead</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">CICADA</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-4" name="Set position to another object" sid="8929757974035567" type="msSlave">
+                                            <param id="0" name="Object">player12nd</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block any="1" sid="8338831281680321">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="5055981548777241" type="System">
+                                    <param id="0" name="Variable">partyConfiguration</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">PARTY_CICADA_SLAVE</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="144475000767306" type="System">
+                                    <param id="0" name="Variable">partyConfiguration</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">PARTY_SLAVE_SOLDIER</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="3752530398890374" type="msSlave">
+                                    <param id="0" name="Object">player12nd</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6147117556235762">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="931201269028181" type="System">
+                            <param id="0" name="Variable">partyLead</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">SOLDIER</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="6427360357578066" type="msSoldier">
+                            <param id="0" name="Object">player1lead</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9301299799272409">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="5061900028747323" type="System">
+                            <param id="0" name="Variable">partyLead</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">SOLDIER</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9176782692856292">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="680865440018584" type="System">
+                                    <param id="0" name="Variable">partyConfiguration</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">PARTY_OF_3</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4030161270558783">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="6438412635922271" type="System">
+                                            <param id="0" name="Variable">partyLead</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">CICADA</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-4" name="Set position to another object" sid="9281252765627743" type="msSoldier">
+                                            <param id="0" name="Object">player13rd</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5981271007686907">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="5867955932796407" type="System">
+                                            <param id="0" name="Variable">partyLead</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">SLAVE</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-4" name="Set position to another object" sid="1091887011107627" type="msSoldier">
+                                            <param id="0" name="Object">player12nd</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block any="1" sid="8775106127533653">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9822032189443221" type="System">
+                                    <param id="0" name="Variable">partyConfiguration</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">PARTY_CICADA_SOLDIER</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="535192863266636" type="System">
+                                    <param id="0" name="Variable">partyConfiguration</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">PARTY_SLAVE_SOLDIER</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="5019003376054845" type="msSoldier">
+                                    <param id="0" name="Object">player12nd</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

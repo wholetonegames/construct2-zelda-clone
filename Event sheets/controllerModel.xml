@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>controllerModel</name>
+    <events>
+        <variable comment="0=false;1=true" constant="0" name="isSinglePlayerGame" sid="7998986088914241" static="0" type="number">1</variable>
+        <variable constant="0" name="Player1ControllerConfig" sid="5371135666604409" static="0" type="number">0</variable>
+        <event-block disabled="1" sid="3142914256585766">
+            <conditions>
+                <condition id="1" name="On any key pressed" sid="6051743630777825" type="Keyboard" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="1022081038355548" type="keycodes">
+                    <param id="0" name="Text">Keyboard.LastKeyCode</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="8864739205944647">
+            <conditions>
+                <condition id="8" name="On any button pressed" sid="7446287010465475" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="5016884061816062" type="keycodes">
+                    <param id="0" name="Text">Gamepad.LastButton(0)</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Player1KeyboardConfig = 0&#x0D;&#x0A;--------------------------------------------------&#x0D;&#x0A;/********ARROWS SCHEME*********************/&#x0D;&#x0A;ARROWS - RIGHT HAND&#x0D;&#x0A;37- LEFT&#x0D;&#x0A;38-UP&#x0D;&#x0A;39-RIGHT&#x0D;&#x0A;40-DOWN&#x0D;&#x0A;&#x0D;&#x0A;LETTERS -LEFT HAND&#x0D;&#x0A;S-83&#x0D;&#x0A;Z-90&#x0D;&#x0A;X-88&#x0D;&#x0A;C-67&#x0D;&#x0A;&#x0D;&#x0A;-----------------------------------------------&#x0D;&#x0A;Player1KeyboardConfig = 1&#x0D;&#x0A;-----------------------------------------------&#x0D;&#x0A;/********ASWD SCHEME*********************/&#x0D;&#x0A;LETTERS -LEFT HAND&#x0D;&#x0A;A-65&#x0D;&#x0A;W-87&#x0D;&#x0A;D-68&#x0D;&#x0A;S-83&#x0D;&#x0A;&#x0D;&#x0A;LETTERS -RIGHT HAND&#x0D;&#x0A;I-73&#x0D;&#x0A;J-74&#x0D;&#x0A;K-75&#x0D;&#x0A;L-76&#x0D;&#x0A;&#x0D;&#x0A;-----------------------------------------------&#x0D;&#x0A;Player1KeyboardConfig = 2&#x0D;&#x0A;-----------------------------------------------&#x0D;&#x0A;/****controller******/&#x0D;&#x0A;A=0&#x0D;&#x0A;B=1&#x0D;&#x0A;X=2&#x0D;&#x0A;Y=3&#x0D;&#x0A;LB=4&#x0D;&#x0A;RB=5&#x0D;&#x0A;LT=6&#x0D;&#x0A;RT=7&#x0D;&#x0A;UP=12&#x0D;&#x0A;DOWN=13&#x0D;&#x0A;LEFT=14&#x0D;&#x0A;RIGHT=15&#x0D;&#x0A;START=9</comment>
+        <event-block sid="2901019383121155">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="959414861311075" type="System">
+                    <param id="0" name="Variable">PauseGame</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="4" inverted="1" name="Has gamepads" sid="9171504720910517" type="Gamepad" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="161483756566314">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="8880142306319969" type="Keyboard">
+                            <param id="0" name="Key">49</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="9758416469134205" type="System">
+                            <param id="0" name="Variable">Player1ControllerConfig</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8963100286554659">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="6475129764700758" type="Keyboard">
+                            <param id="0" name="Key">50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="2847844723129097" type="System">
+                            <param id="0" name="Variable">Player1ControllerConfig</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="790283221753268">
+            <conditions>
+                <condition id="1" name="On gamepad connected" sid="246378538738131" type="Gamepad" />
+                <condition id="8" name="On any button pressed" sid="361504986286405" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="551131988987657" type="System">
+                    <param id="0" name="Variable">Player1ControllerConfig</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>menu instructions</comment>
+        <event-block sid="6108282152576687">
+            <conditions>
+                <condition id="1" name="On gamepad connected" sid="6300123672003937" type="Gamepad" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="2936002006556471" type="controlInstructions">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7281875455429548">
+            <conditions>
+                <condition id="2" name="On gamepad disconnected" sid="8237685823142697" type="Gamepad" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="5657765382936704" type="controlInstructions">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>2 player game</comment>
+        <event-block disabled="1" sid="4628917217926651">
+            <conditions>
+                <condition id="8" name="On any button pressed" sid="3764944560820978" type="Gamepad">
+                    <param id="0" name="Gamepad">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="6866611229785075" type="System">
+                    <param id="0" name="Variable">isSinglePlayerGame</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="668465959669019">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="424759318760135" type="System">
+                    <param id="0" name="Variable">Player1ControllerConfig</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="888161223248384" type="player1lead">
+                    <param id="0" name="Instance variable">buttonAction</param>
+                    <param id="1" name="Value">67</param>
+                </action>
+                <action id="-10" name="Set value" sid="402619166889438" type="player1lead">
+                    <param id="0" name="Instance variable">buttonItem</param>
+                    <param id="1" name="Value">88</param>
+                </action>
+                <action id="-10" name="Set value" sid="895075792994649" type="player1lead">
+                    <param id="0" name="Instance variable">buttonSwitchItem</param>
+                    <param id="1" name="Value">90</param>
+                </action>
+                <action id="-10" name="Set value" sid="489588000774748" type="player1lead">
+                    <param id="0" name="Instance variable">buttonSwitchChara</param>
+                    <param id="1" name="Value">83</param>
+                </action>
+                <action id="-10" name="Set value" sid="788919435326875" type="player1lead">
+                    <param id="0" name="Instance variable">buttonLeft</param>
+                    <param id="1" name="Value">37</param>
+                </action>
+                <action id="-10" name="Set value" sid="318007608625645" type="player1lead">
+                    <param id="0" name="Instance variable">buttonUp</param>
+                    <param id="1" name="Value">38</param>
+                </action>
+                <action id="-10" name="Set value" sid="494058009320508" type="player1lead">
+                    <param id="0" name="Instance variable">buttonRight</param>
+                    <param id="1" name="Value">39</param>
+                </action>
+                <action id="-10" name="Set value" sid="188319996289516" type="player1lead">
+                    <param id="0" name="Instance variable">buttonDown</param>
+                    <param id="1" name="Value">40</param>
+                </action>
+                <action id="-10" name="Set value" sid="197876067755643" type="player1lead">
+                    <param id="0" name="Instance variable">buttonPause</param>
+                    <param id="1" name="Value">32</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="317296528647379">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="264801988779118" type="System">
+                    <param id="0" name="Variable">Player1ControllerConfig</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="621513252338730" type="player1lead">
+                    <param id="0" name="Instance variable">buttonAction</param>
+                    <param id="1" name="Value">74</param>
+                </action>
+                <action id="-10" name="Set value" sid="271030491763391" type="player1lead">
+                    <param id="0" name="Instance variable">buttonItem</param>
+                    <param id="1" name="Value">75</param>
+                </action>
+                <action id="-10" name="Set value" sid="710957880652237" type="player1lead">
+                    <param id="0" name="Instance variable">buttonSwitchItem</param>
+                    <param id="1" name="Value">76</param>
+                </action>
+                <action id="-10" name="Set value" sid="531652977239613" type="player1lead">
+                    <param id="0" name="Instance variable">buttonSwitchChara</param>
+                    <param id="1" name="Value">73</param>
+                </action>
+                <action id="-10" name="Set value" sid="329972983664003" type="player1lead">
+                    <param id="0" name="Instance variable">buttonLeft</param>
+                    <param id="1" name="Value">65</param>
+                </action>
+                <action id="-10" name="Set value" sid="911377954455740" type="player1lead">
+                    <param id="0" name="Instance variable">buttonUp</param>
+                    <param id="1" name="Value">87</param>
+                </action>
+                <action id="-10" name="Set value" sid="959694947084487" type="player1lead">
+                    <param id="0" name="Instance variable">buttonRight</param>
+                    <param id="1" name="Value">68</param>
+                </action>
+                <action id="-10" name="Set value" sid="463137683046560" type="player1lead">
+                    <param id="0" name="Instance variable">buttonDown</param>
+                    <param id="1" name="Value">83</param>
+                </action>
+                <action id="-10" name="Set value" sid="855844037990316" type="player1lead">
+                    <param id="0" name="Instance variable">buttonPause</param>
+                    <param id="1" name="Value">32</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="354703259184924">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="790321543688670" type="System">
+                    <param id="0" name="Variable">Player1ControllerConfig</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="340713658916813" type="player1lead">
+                    <param id="0" name="Instance variable">buttonAction</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="722320199560202" type="player1lead">
+                    <param id="0" name="Instance variable">buttonItem</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="-10" name="Set value" sid="507050045614883" type="player1lead">
+                    <param id="0" name="Instance variable">buttonSwitchItem</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="185577289076688" type="player1lead">
+                    <param id="0" name="Instance variable">buttonSwitchChara</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-10" name="Set value" sid="544022616416009" type="player1lead">
+                    <param id="0" name="Instance variable">buttonLeft</param>
+                    <param id="1" name="Value">14</param>
+                </action>
+                <action id="-10" name="Set value" sid="916562506184079" type="player1lead">
+                    <param id="0" name="Instance variable">buttonUp</param>
+                    <param id="1" name="Value">12</param>
+                </action>
+                <action id="-10" name="Set value" sid="874365048272507" type="player1lead">
+                    <param id="0" name="Instance variable">buttonRight</param>
+                    <param id="1" name="Value">15</param>
+                </action>
+                <action id="-10" name="Set value" sid="338394867178223" type="player1lead">
+                    <param id="0" name="Instance variable">buttonDown</param>
+                    <param id="1" name="Value">13</param>
+                </action>
+                <action id="-10" name="Set value" sid="394643979850727" type="player1lead">
+                    <param id="0" name="Instance variable">buttonPause</param>
+                    <param id="1" name="Value">9</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

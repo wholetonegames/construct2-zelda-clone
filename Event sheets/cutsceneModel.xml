@@ -1,0 +1,659 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>cutsceneModel</name>
+    <events>
+        <event-group description="" sid="907729535697417" title="cutscenesGeneral">
+            <sub-events>
+                <event-block sid="566061209030202">
+                    <conditions>
+                        <condition id="1" name="On any click" sid="838086040841227" type="Mouse" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="821959216511834" type="function">
+                            <param id="0" name="Name">&quot;exitCutScene&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="924758030991822">
+                    <conditions>
+                        <condition id="8" name="On any button pressed" sid="187825616092887" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="785182400775350" type="function">
+                            <param id="0" name="Name">&quot;exitCutScene&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="316412857027298">
+                    <conditions>
+                        <condition id="8" name="On any button pressed" sid="120832485991246" type="Gamepad">
+                            <param id="0" name="Gamepad">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="567515560363943" type="function">
+                            <param id="0" name="Name">&quot;exitCutScene&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="917167938784707">
+                    <conditions>
+                        <condition id="1" name="On any key pressed" sid="664809035483751" type="Keyboard" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="419573400521695" type="function">
+                            <param id="0" name="Name">&quot;exitCutScene&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="130714469028376">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="436183022992801" type="npcMessage" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="741912513673852" type="function">
+                            <param id="0" name="Name">&quot;resetTextBox&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="122726944620310">
+                    <conditions>
+                        <condition id="-10" name="Compare opacity" sid="996384119852073" type="npcTextBG">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Opacity">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="787957491543916" type="npcTextBG" />
+                        <action id="-9" name="Destroy" sid="339175656042068" type="npcMessage" />
+                    </actions>
+                </event-block>
+                <event-block sid="821280894820771">
+                    <conditions>
+                        <condition id="0" name="On function" sid="520482967774092" type="function">
+                            <param id="0" name="Name">&quot;exitCutScene&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-25" name="Go to layout (by name)" sid="345738489490181" type="System">
+                            <param id="0" name="Layout">afterCutScene</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="605957717290838" type="System">
+                            <param id="0" name="Variable">text_speed</param>
+                            <param id="1" name="Value">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="292369143496685">
+                    <conditions>
+                        <condition id="0" name="On function" sid="157937897783051" type="function">
+                            <param id="0" name="Name">&quot;resetTextBox&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="516451479603914" type="npcMessage">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="286610725613253" type="introCounter">
+                            <param id="0" name="Instance variable">currentStringIndex</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="621048188530671">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="632196039685203" type="lionSoldierIntro">
+                            <param id="0" name="Object">introTigerSoldier</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="954141802877310" type="introTigerSoldier">
+                            <param id="0" name="Instance variable">addX</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="616885170258706" type="lionSoldierIntro">
+                            <param id="0" name="Instance variable">addX</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="123671616357002" type="introTigerSoldier">
+                            <param id="0" name="Object">blinkDeath</param>
+                            <param id="1" name="Layer">LAYERCHARA</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="579674875101540" type="introTigerSoldier" />
+                        <action id="0" name="Spawn another object" sid="900769122470170" type="lionSoldierIntro">
+                            <param id="0" name="Object">blinkDeath</param>
+                            <param id="1" name="Layer">LAYERCHARA</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="240555282140323" type="lionSoldierIntro" />
+                    </actions>
+                </event-block>
+                <event-block sid="155424912139071">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="212493129190390" type="lionSoldierIntro">
+                            <param id="0" name="Object">introdeadlyFog</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="439231314310249" type="lionSoldierIntro">
+                            <param id="0" name="Instance variable">addX</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="456739691643931" type="lionSoldierIntro">
+                            <param id="0" name="Object">blinkDeath</param>
+                            <param id="1" name="Layer">LAYERCHARA</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="219703786889235" type="lionSoldierIntro" />
+                    </actions>
+                </event-block>
+                <event-block sid="253119529288576">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="687529641099201" type="cicVictimIntro">
+                            <param id="0" name="Object">introdeadlyFog</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="681957530440474" type="cicVictimIntro">
+                            <param id="0" name="Instance variable">addY</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="656857978081829" type="cicVictimIntro">
+                            <param id="0" name="Object">blinkDeath</param>
+                            <param id="1" name="Layer">LAYERCHARA</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="282547067457031" type="cicVictimIntro" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="364260827817347" title="introCutscene">
+            <sub-events>
+                <event-block sid="121233647718089">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="754951305046870" type="System" />
+                        <condition id="-10" name="Compare opacity" sid="720144546154582" type="cicadaLogo">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Opacity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="569748701820735" type="cicadaLogo">
+                            <param id="0" name="Opacity">Self.Opacity + 1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="927403407361464">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="128474679300030" type="System" />
+                        <condition id="-10" name="Compare opacity" sid="150729610436461" type="wholetoneLogo">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Opacity">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="781236676261415" type="wholetoneLogo">
+                            <param id="0" name="Opacity">Self.Opacity - 1</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="113639072176810" type="jcLogo">
+                            <param id="0" name="Opacity">Self.Opacity - 1</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="618598854150321" type="rpscLogo">
+                            <param id="0" name="Opacity">Self.Opacity - 1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="966633402150036">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="502274313291131" type="System" />
+                        <condition id="-10" name="Compare opacity" sid="201025639234330" type="npcTextBG">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Opacity">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="493644342144072" type="npcTextBG">
+                            <param id="0" name="Opacity">Self.Opacity - 3</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="357156066850915" type="npcMessage">
+                            <param id="0" name="Opacity">Self.Opacity - 3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="125401818113841">
+                    <conditions>
+                        <condition id="-10" name="Compare opacity" sid="989422393148163" type="wholetoneLogo">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Opacity">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="892857602311145" type="wholetoneLogo" />
+                        <action id="-9" name="Destroy" sid="637747042655009" type="jcLogo" />
+                        <action id="-9" name="Destroy" sid="970270929340534" type="rpscLogo" />
+                    </actions>
+                </event-block>
+                <event-block sid="941018686434089">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="926290582829802" type="System">
+                            <param id="0" name="Variable">afterCutScene</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;introScreen&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="537526173473366">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="841951973011289" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="503802327690578" type="System">
+                                    <param id="0" name="Object to create">npcTextBG</param>
+                                    <param id="1" name="Layer">LAYERMENU</param>
+                                    <param id="2" name="X">240</param>
+                                    <param id="3" name="Y">RESOLUTION_HEIGHT - 180</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="940451687531093" type="System">
+                                    <param id="0" name="Object to create">npcMessage</param>
+                                    <param id="1" name="Layer">LAYERMENU</param>
+                                    <param id="2" name="X">260</param>
+                                    <param id="3" name="Y">RESOLUTION_HEIGHT - 170</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="500151348826483" type="npcMessage">
+                                    <param id="0" name="Width">780</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="860280493334588" type="npcMessage">
+                                    <param id="0" name="Height">150</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="103073329378949" type="System">
+                                    <param id="0" name="Variable">text_speed</param>
+                                    <param id="1" name="Value">25</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="366004288328930" type="introCounter">
+                                    <param id="0" name="Instance variable">introText</param>
+                                    <param id="1" name="Value">&quot;From the mind that brought you: Rock Paper Scissors Champion, and the Jesus Christ RPG Trilogy. Comes a new epic adventure!&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="507471364221914" type="camera_scroller">
+                                    <param id="0" name="X">RESOLUTION_WIDTH / 2</param>
+                                    <param id="1" name="Y">RESOLUTION_HEIGHT / 2</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="366810492395641" type="cicadaLogo">
+                                    <param id="0" name="X">RESOLUTION_WIDTH / 2</param>
+                                    <param id="1" name="Y">RESOLUTION_HEIGHT / 2</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="238153045175622" type="cicadaLogo">
+                                    <param id="0" name="Opacity">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="594674774278161" type="camera_scroller">
+                                    <param id="0" name="Instance variable">xScroll</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="956457641306075" type="camera_scroller">
+                                    <param id="0" name="Instance variable">yScroll</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="214629702301693" type="focusShadow">
+                                    <param id="0" name="Layer">LAYERMENU</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="236243848205945" type="focusShadow">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">0</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="637989637608102" type="focusShadow" />
+                            </actions>
+                            <sub-events>
+                                <event-block sid="209627527355801">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="960230631091156" type="System">
+                                            <param id="0" name="Object">introTigerSoldier</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="695277830896361">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="920911066036817" type="System">
+                                                    <param id="0" name="First value">introTigerSoldier.UID % 2</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="865042286493190" type="introTigerSoldier">
+                                                    <param id="0" name="Animation">&quot;walkRight&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="264581718454696">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="122720650846628" type="System">
+                                                    <param id="0" name="First value">introTigerSoldier.UID % 2</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="281679384478383" type="introTigerSoldier">
+                                                    <param id="0" name="Animation">&quot;walkRight2&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="867807100275658">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="414420658665020" type="System">
+                                            <param id="0" name="Object">lionSoldierIntro</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="816062598093822">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="483939784508667" type="System">
+                                                    <param id="0" name="First value">lionSoldierIntro.UID % 2</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="575667999499923" type="lionSoldierIntro">
+                                                    <param id="0" name="Animation">&quot;walkLeft2&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="289829335358209">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="424733048318285" type="System">
+                                                    <param id="0" name="First value">lionSoldierIntro.UID % 2</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="943075103986913" type="lionSoldierIntro">
+                                                    <param id="0" name="Animation">&quot;walkLeft&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="444330885351215">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="457639682077459" type="System">
+                                    <param id="0" name="Interval (seconds)">1.0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="383975612677933" type="introCounter">
+                                    <param id="0" name="Instance variable">counter</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="145711670093333">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="222253159376757" type="introCounter">
+                                    <param id="0" name="Instance variable">counter</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="604562115562157" type="jcLogo">
+                                    <param id="0" name="Opacity">99</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="908205054152223" type="rpscLogo">
+                                    <param id="0" name="Opacity">99</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="368836991045291" type="wholetoneLogo">
+                                    <param id="0" name="Opacity">99</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="599309903973384" type="introCounter">
+                                    <param id="0" name="Instance variable">introText</param>
+                                    <param id="1" name="Value">&quot;1700 years ago, tigers and lions were engaged in a genocidal war of attrition. &#x0D;&#x0A;With all their females and cubs exterminated, the tigers had nothing left to lose.&#x0D;&#x0A;And so, a mysterious fog appeared. And after it vanished, the remaining tigers and all male lions were dead. &#x0D;&#x0A;After what was dubbed, The Fall of the Pride, peace reigned.&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="886167668805629" type="function">
+                                    <param id="0" name="Name">&quot;resetTextBox&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-10" name="Set value" sid="908397799661968" type="introTigerSoldier">
+                                    <param id="0" name="Instance variable">addX</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="189724961939955" type="lionSoldierIntro">
+                                    <param id="0" name="Instance variable">addX</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="133307920103786">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="470489131365449" type="introCounter">
+                                    <param id="0" name="Instance variable">counter</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">32</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="452614904990771" type="introCounter">
+                                    <param id="0" name="Instance variable">introText</param>
+                                    <param id="1" name="Value">&quot;Cloning their queens to survive, the lionesses divided into insect worshiping tribes. As the all-female societies evolved, the stories of the past were long forgotten.&#x0D;&#x0A;That is: until the fog returned. And now decimating a genetically identical population.&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="921014765403410" type="function">
+                                    <param id="0" name="Name">&quot;resetTextBox&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-10" name="Set value" sid="587132876939344" type="camera_scroller">
+                                    <param id="0" name="Instance variable">xScroll</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="838931709974341" type="camera_scroller">
+                                    <param id="0" name="Instance variable">yScroll</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="735530866107722">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="945131287033424" type="introCounter">
+                                    <param id="0" name="Instance variable">counter</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">44</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="401601103428541" type="camera_scroller">
+                                    <param id="0" name="Instance variable">xScroll</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="454274424298481">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="379355102952501" type="introCounter">
+                                    <param id="0" name="Instance variable">counter</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">53</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="626199706087089" type="introCounter">
+                                    <param id="0" name="Instance variable">introText</param>
+                                    <param id="1" name="Value">&quot;With no cure in sight, amidst paranoia and the spread of the fog, a new sect emerges. These lionesses pray for the return of the long forgotten male. The one who shall bring diversity to a world of total equality.&#x0D;&#x0A;&#x0D;&#x0A;A savior called Cicada.&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="441863404755058" type="function">
+                                    <param id="0" name="Name">&quot;resetTextBox&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-10" name="Set value" sid="786634589771529" type="cicVictimIntro">
+                                    <param id="0" name="Instance variable">addY</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="795549030487052" type="cicVictimIntro">
+                                    <param id="0" name="Animation">&quot;walkDown&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="976031512488241">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="328553443124843" type="introCounter">
+                                    <param id="0" name="Instance variable">counter</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">70</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="517165745127828" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Flash" id="0" name="Flash" sid="951977067644260" type="cicadaStatueIntro">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="976918319868019">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="642992456350932" type="introCounter">
+                                    <param id="0" name="Instance variable">counter</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">71</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="913984265095240" type="cicadaStatueIntro">
+                                    <param id="0" name="Animation">&quot;stopped&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="995902464226967">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="270516311746998" type="introCounter">
+                                    <param id="0" name="Instance variable">counter</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">72</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="418305676047709" type="introCounter">
+                                    <param id="0" name="Instance variable">introText</param>
+                                    <param id="1" name="Value">&quot;But the true question is: &#x0D;&#x0A;&#x0D;&#x0A;Will he come to save the world?&#x0D;&#x0A;&#x0D;&#x0A;Or to put its misery to an end?&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="956483296409960" type="function">
+                                    <param id="0" name="Name">&quot;resetTextBox&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-10" name="Set value" sid="833251116868665" type="cicadaStatueIntro">
+                                    <param id="0" name="Instance variable">addY</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="659227076305353" type="cicadaStatueIntro">
+                                    <param id="0" name="Animation">&quot;walkDown&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="539799123359568">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="119026740515559" type="introCounter">
+                                    <param id="0" name="Instance variable">counter</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">78</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="897972946403775" type="cicadaLogo">
+                                    <param id="0" name="Opacity">1</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="130016482817799" type="npcTextBG">
+                                    <param id="0" name="Opacity">99</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="721466790338057" type="npcMessage">
+                                    <param id="0" name="Opacity">99</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="378119726207982">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="546159826743262" type="System">
+                                    <param id="0" name="Interval (seconds)">1 / text_speed</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Append text" sid="875036830512454" type="npcMessage">
+                                    <param id="0" name="Text">tokenat(introCounter.introText, introCounter.currentStringIndex, &quot;&quot;)</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="868947434743145" type="introCounter">
+                                    <param id="0" name="Instance variable">currentStringIndex</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="694570838702257">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="472352290484133" type="introCounter">
+                                    <param id="0" name="Instance variable">counter</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">90</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="546104758949392" type="function">
+                                    <param id="0" name="Name">&quot;exitCutScene&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="340852258642349">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="740917417810088" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="475693259694587" type="introCounter">
+                                    <param id="0" name="Text">introCounter.counter</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="647510236421979" type="camera_scroller">
+                                    <param id="0" name="X">Self.X + Self.xScroll</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="863002840874401" type="camera_scroller">
+                                    <param id="0" name="Y">Self.Y + Self.yScroll</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="331536474385557" type="introTigerSoldier">
+                                    <param id="0" name="X">Self.X + Self.addX</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="733720124244722" type="lionSoldierIntro">
+                                    <param id="0" name="X">Self.X + Self.addX</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="724963214057432" type="cicVictimIntro">
+                                    <param id="0" name="Y">Self.Y + Self.addY</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="436656016767321" type="cicadaStatueIntro">
+                                    <param id="0" name="Y">Self.Y + Self.addY</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

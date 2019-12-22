@@ -1,0 +1,781 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>saveModel</name>
+    <events>
+        <event-group description="" sid="810891998719362" title="LoadSave">
+            <sub-events>
+                <event-block sid="350587914049163">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="805507530819148" type="System">
+                            <param id="0" name="Variable">currentLoadState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;a&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="714230235804789" type="System">
+                            <param id="0" name="Variable">currentLoadState</param>
+                            <param id="1" name="Value">LOADSTATE1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="111995488692348">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="196109747866127" type="savePoint">
+                            <param id="0" name="Object">player1lead</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Create folder" sid="732984701295417" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder &amp;&quot;saves&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="946177726247013" type="System">
+                            <param id="0" name="Variable">DateTime</param>
+                            <param id="1" name="Value">Browser.ExecJS(&quot;Date()&quot;)</param>
+                        </action>
+                        <action id="0" name="Write file" sid="838702743826391" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot;&lt;?xml version=&apos;1.0&apos; encoding=&apos;utf-8&apos; ?&gt;&quot;</param>
+                        </action>
+                        <action id="4" name="Append file" sid="321721062334888" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot;&lt;p1 &quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="459299124640393" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; a =&apos;&quot;&amp;HP_max_Cicada&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="474902015351356" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; b=&apos;&quot;&amp;HP_max_Slave&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="288302243495958" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; c=&apos;&quot;&amp;HP_max_Soldier&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="248775639649277" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; d=&apos;&quot;&amp;KO_Cicada&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="917210094012282" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; e=&apos;&quot;&amp;KO_Soldier&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="925937927486531" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; f=&apos;&quot;&amp;partyConfiguration&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="243271935750594" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; g=&apos;&quot;&amp;has_cicada_joined&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="692387707330946" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; h=&apos;&quot;&amp;has_soldier_joined&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="735758674690051" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; i=&apos;&quot;&amp;partyMoney&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="342362751975296" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; j=&apos;&quot;&amp;dungeonLevel&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="362624218680390" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; k=&apos;&quot;&amp;dungeonX&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="546997021298739" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; l=&apos;&quot;&amp;dungeonY&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="772448540109161" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; m=&apos;&quot;&amp;lastCheckpoint&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="178547360333809" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; n=&apos;&quot;&amp;dungeonMaxX&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="483751718793370" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; o=&apos;&quot;&amp;dungeonMaxY&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="421979854245666" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; p=&apos;&quot;&amp;Item_cicada_requiem&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="140748036429479" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; q=&apos;&quot;&amp;Item_cicada_shot&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="313739482098676" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; r=&apos;&quot;&amp;Item_cicada_statue&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="770371635324948" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; s=&apos;&quot;&amp;Item_slave_boomerang&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="449612746863827" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; t=&apos;&quot;&amp;Item_slave_hpPotion&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="742494566941519" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; u=&apos;&quot;&amp;Item_slave_magic&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="551770286629633" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; v=&apos;&quot;&amp;Item_sodier_wind&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="387077678306068" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; w=&apos;&quot;&amp;Item_soldier_bomb&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="884658218967016" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; x=&apos;&quot;&amp;Item_soldier_fire&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="276060436310364" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; y=&apos;&quot;&amp;Item_soldier_shot&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="894903253248626" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; z=&apos;&quot;&amp;DateTime&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="945396820910697" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; aa=&apos;&quot;&amp;swordLevel&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="514556075531570" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; ab=&apos;&quot;&amp;beatenBoss1&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="181112891267202" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; ac=&apos;&quot;&amp;beatenBoss2&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="151958665593423" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; ad=&apos;&quot;&amp;beatenBoss3&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="866482012783194" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; ae=&apos;&quot;&amp;beatenBoss4&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="112905233666765" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; af=&apos;&quot;&amp;beatenBoss5&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="293402992827625" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; ag=&apos;&quot;&amp;beatenBoss6&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="844757007234803" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot; ah=&apos;&quot;&amp;beatenBoss7&amp;&quot;&apos;&quot; </param>
+                        </action>
+                        <action id="4" name="Append file" sid="370447614459965" type="NWjs">
+                            <param id="0" name="Path">NWjs.AppFolder&amp;&quot;saves/&quot;&amp;currentLoadState</param>
+                            <param id="1" name="Contents">&quot;&gt;&lt;/p1&gt;&quot; </param>
+                        </action>
+                        <action id="-3" name="Create object" sid="499571911367637" type="System">
+                            <param id="0" name="Object to create">saveWarningBG</param>
+                            <param id="1" name="Layer">LAYERMENU</param>
+                            <param id="2" name="X">RESOLUTION_WIDTH / 2 </param>
+                            <param id="3" name="Y">RESOLUTION_HEIGHT / 2</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="130532603694303" type="saveWarningTXT">
+                            <param id="0" name="X">RESOLUTION_WIDTH / 2</param>
+                            <param id="1" name="Y">RESOLUTION_HEIGHT / 2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="450058223641043" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="610227013975224" type="saveWarningBG" />
+                    </actions>
+                </event-block>
+                <event-block sid="653859576952021">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="983635792602949" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">loadGame</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Request URL" sid="777435303540575" type="AJAX">
+                            <param id="0" name="Tag">&quot;loadFile&quot;</param>
+                            <param id="1" name="URL">&quot;/saves/&quot;&amp;currentLoadState</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="153608353129631">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="939663924822398" type="AJAX">
+                            <param id="0" name="Tag">&quot;loadFile&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Load" sid="680375099030674" type="XML">
+                            <param id="0" name="XML">AJAX.LastData</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="269231261019805" type="System">
+                            <param id="0" name="Variable">HP_max_Cicada</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@a&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="514705985873684" type="System">
+                            <param id="0" name="Variable">HP_max_Slave</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@b&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="582180731098850" type="System">
+                            <param id="0" name="Variable">HP_max_Soldier</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@c&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="721856186544381" type="System">
+                            <param id="0" name="Variable">KO_Cicada</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@d&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="297505549172074" type="System">
+                            <param id="0" name="Variable">KO_Soldier</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@e&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="144075725349457" type="System">
+                            <param id="0" name="Variable">partyConfiguration</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@f&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="691007452280310" type="System">
+                            <param id="0" name="Variable">has_cicada_joined</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@g&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="964618975338170" type="System">
+                            <param id="0" name="Variable">has_soldier_joined</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@h&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="113072696544980" type="System">
+                            <param id="0" name="Variable">partyMoney</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@i&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="999868490342491" type="System">
+                            <param id="0" name="Variable">dungeonLevel</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;/p1/@j&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="159736395399363" type="System">
+                            <param id="0" name="Variable">dungeonX</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@k&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="785879565671737" type="System">
+                            <param id="0" name="Variable">dungeonY</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@l&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="845624811530875" type="System">
+                            <param id="0" name="Variable">lastCheckpoint</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;/p1/@m&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="712653860258100" type="System">
+                            <param id="0" name="Variable">dungeonMaxX</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@n&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="576699967630321" type="System">
+                            <param id="0" name="Variable">dungeonMaxY</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@o&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="918838922009056" type="System">
+                            <param id="0" name="Variable">Item_cicada_requiem</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@p&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="771312345680137" type="System">
+                            <param id="0" name="Variable">Item_cicada_shot</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@q&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="756427448675779" type="System">
+                            <param id="0" name="Variable">Item_cicada_statue</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@r&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="614059120272789" type="System">
+                            <param id="0" name="Variable">Item_slave_boomerang</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@s&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="709925003612051" type="System">
+                            <param id="0" name="Variable">Item_slave_hpPotion</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@t&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="358195318244301" type="System">
+                            <param id="0" name="Variable">Item_slave_magic</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@u&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="107996386943610" type="System">
+                            <param id="0" name="Variable">Item_sodier_wind</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@v&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="462870378370505" type="System">
+                            <param id="0" name="Variable">Item_soldier_bomb</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@w&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="897092437878201" type="System">
+                            <param id="0" name="Variable">Item_soldier_fire</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@x&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="133641709117550" type="System">
+                            <param id="0" name="Variable">Item_soldier_shot</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@y&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="796240481866801" type="System">
+                            <param id="0" name="Variable">DateTime</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;/p1/@z&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="331682383400995" type="System">
+                            <param id="0" name="Variable">swordLevel</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@aa&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="636429908422177" type="System">
+                            <param id="0" name="Variable">beatenBoss1</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@ab&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="640304426124963" type="System">
+                            <param id="0" name="Variable">beatenBoss2</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@ac&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="851500584649549" type="System">
+                            <param id="0" name="Variable">beatenBoss3</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@ad&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="392814728861821" type="System">
+                            <param id="0" name="Variable">beatenBoss4</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@ae&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="816455769995225" type="System">
+                            <param id="0" name="Variable">beatenBoss5</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@af&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="687274652435356" type="System">
+                            <param id="0" name="Variable">beatenBoss6</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@ag&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="389403323670736" type="System">
+                            <param id="0" name="Variable">beatenBoss7</param>
+                            <param id="1" name="Value">int(XML.StringValue(&quot;/p1/@ah&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="190989766128721" type="System">
+                            <param id="0" name="Variable">preppingNewRoom</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="145430861873191" type="System">
+                            <param id="0" name="Variable">PauseGame</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="459042125430933" title="Pause behavior">
+            <sub-events>
+                <event-block any="1" sid="753744931312963">
+                    <conditions>
+                        <condition id="4" name="On key code pressed" sid="313738883842328" type="Keyboard">
+                            <param id="0" name="Keycode">player1lead.buttonPause</param>
+                        </condition>
+                        <condition id="11" name="On button index pressed" sid="831708714074705" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button index">player1lead.buttonPause</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="587304476622655">
+                            <conditions />
+                            <actions>
+                                <action id="-10" name="Add to" sid="908979676212593" type="System">
+                                    <param id="0" name="Variable">PauseGame</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="600647743373425">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="275642495491990" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">quitGame</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Close" sid="805316823377342" type="Browser" />
+                    </actions>
+                </event-block>
+                <event-block sid="695933146527064">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="669524216755777" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">returnToMenu</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="104897343990503" type="System">
+                            <param id="0" name="Layout">IntroScreenMenu</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="459972698905177">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="200947881585748" type="Mouse">
+                            <param id="0" name="Object">quitGame</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="690397764377745" type="quitGame">
+                            <param id="0" name="Color">rgb(255, 255, 0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="899922174219047">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="458021155508301" type="Mouse">
+                            <param id="0" name="Object">quitGame</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="728163207980204" type="quitGame">
+                            <param id="0" name="Color">rgb(255, 255, 255)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="529134387838558">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="281804423335834" type="Mouse">
+                            <param id="0" name="Object">returnToMenu</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="154218233051368" type="returnToMenu">
+                            <param id="0" name="Color">rgb(255, 255, 0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="596201712492443">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="979391210601531" type="Mouse">
+                            <param id="0" name="Object">returnToMenu</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="256708909646420" type="returnToMenu">
+                            <param id="0" name="Color">rgb(255, 255, 255)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="463178285208240">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="927695839314435" type="Mouse">
+                            <param id="0" name="Object">loadGame</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="342247113543241" type="loadGame">
+                            <param id="0" name="Color">rgb(255, 255, 0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="155067300754137">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="915182559270914" type="Mouse">
+                            <param id="0" name="Object">loadGame</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="162884288988729" type="loadGame">
+                            <param id="0" name="Color">rgb(255, 255, 255)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="843493203087027">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="961564315873157" type="System">
+                            <param id="0" name="Variable">PauseGame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="552326311130150" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="135430503389849" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="431229202364009" type="System">
+                            <param id="0" name="Object to create">pauseBG</param>
+                            <param id="1" name="Layer">LAYERMENU</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="144482452435008" type="pauseBG">
+                            <param id="0" name="Opacity">75</param>
+                        </action>
+                        <action id="-29" name="Move to object" sid="963788040777287" type="pause_warning">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Object">pauseBG</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="989698505404603" type="pause_warning">
+                            <param id="0" name="X">OriginalWindowWidth /  2</param>
+                            <param id="1" name="Y">originalWindowHeight / 2</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="610611566021141" type="returnToMenu">
+                            <param id="0" name="X">969</param>
+                            <param id="1" name="Y">579</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="157078729139242" type="loadGame">
+                            <param id="0" name="X">969</param>
+                            <param id="1" name="Y">524</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="164204831188869" type="quitGame">
+                            <param id="0" name="X">969</param>
+                            <param id="1" name="Y">658</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="179228738434129" type="commandTitle">
+                            <param id="0" name="X">40</param>
+                            <param id="1" name="Y">341</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="453668742241969" type="commandLeft">
+                            <param id="0" name="X">40</param>
+                            <param id="1" name="Y">387</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="422694529376982" type="commandRight">
+                            <param id="0" name="X">40</param>
+                            <param id="1" name="Y">425</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="460868331183614" type="commandUp">
+                            <param id="0" name="X">40</param>
+                            <param id="1" name="Y">459</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="967399384240676" type="commandDown">
+                            <param id="0" name="X">40</param>
+                            <param id="1" name="Y">490</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="277694773986698" type="commandAction">
+                            <param id="0" name="X">40</param>
+                            <param id="1" name="Y">524</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="268059006250790" type="commandUseItem">
+                            <param id="0" name="X">40</param>
+                            <param id="1" name="Y">556</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="923877303821450" type="commandSwitchChara">
+                            <param id="0" name="X">40</param>
+                            <param id="1" name="Y">592</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="216169283467485" type="commandSwitchItem">
+                            <param id="0" name="X">40</param>
+                            <param id="1" name="Y">625</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="898723023203543" type="controlInstructions">
+                            <param id="0" name="X">40</param>
+                            <param id="1" name="Y">656</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="756131584027533" type="click2choose">
+                            <param id="0" name="X">974</param>
+                            <param id="1" name="Y">494</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="867990474410401" type="controlInstructions">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="765344155946992" type="bgmTXT">
+                            <param id="0" name="X">689</param>
+                            <param id="1" name="Y">559</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="170867571865584" type="sfxTXT">
+                            <param id="0" name="X">383</param>
+                            <param id="1" name="Y">559</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="313402162178342" type="sfxBar">
+                            <param id="0" name="X">408</param>
+                            <param id="1" name="Y">597</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="689112021114496" type="bgmBar">
+                            <param id="0" name="X">694</param>
+                            <param id="1" name="Y">597</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="426682786587952" type="volumeBG">
+                            <param id="0" name="X">360</param>
+                            <param id="1" name="Y">504</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="237318414563782" type="pauseControlsBG">
+                            <param id="0" name="X">8</param>
+                            <param id="1" name="Y">306</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="728967922729801" type="pauseQuitBG">
+                            <param id="0" name="X">955</param>
+                            <param id="1" name="Y">471</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="270289520269626" type="pauseControlsBG" />
+                        <action id="-25" name="Move to bottom" sid="638423678120742" type="pauseQuitBG" />
+                        <action id="-25" name="Move to bottom" sid="315833229170404" type="volumeBG" />
+                        <action id="-25" name="Move to bottom" sid="560599956677146" type="pauseBG" />
+                        <action id="-9" name="Destroy" sid="337572468251496" type="saveWarningBG" />
+                    </actions>
+                </event-block>
+                <event-block sid="970630814555042">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="809666903802302" type="System">
+                            <param id="0" name="Variable">PauseGame</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="949369699920796" type="System">
+                            <param id="0" name="Variable">PauseGame</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="117721159010631">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="849012117532867" type="System">
+                            <param id="0" name="Variable">PauseGame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="673330928172096" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="324525432904965" type="System">
+                            <param id="0" name="Time scale">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="499594894689060" type="pauseBG" />
+                    </actions>
+                </event-block>
+                <event-block sid="922771773013139">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="985726336181851" type="System">
+                            <param id="0" name="Variable">PauseGame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="736004626874631">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="591957146041325" type="System">
+                                    <param id="0" name="Variable">Player1ControllerConfig</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="726475090439051" type="commandLeft">
+                                    <param id="0" name="Text">Keyboard.StringFromKeyCode(player1lead.buttonLeft)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="854379670783343" type="commandRight">
+                                    <param id="0" name="Text">Keyboard.StringFromKeyCode(player1lead.buttonRight)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="420101833362193" type="commandUp">
+                                    <param id="0" name="Text">Keyboard.StringFromKeyCode(player1lead.buttonUp)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="744671015169773" type="commandDown">
+                                    <param id="0" name="Text">Keyboard.StringFromKeyCode(player1lead.buttonDown)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="100113057833818" type="commandAction">
+                                    <param id="0" name="Text">Keyboard.StringFromKeyCode(player1lead.buttonAction)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="222844634255172" type="commandUseItem">
+                                    <param id="0" name="Text">Keyboard.StringFromKeyCode(player1lead.buttonItem)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="739623910860696" type="commandSwitchChara">
+                                    <param id="0" name="Text">Keyboard.StringFromKeyCode(player1lead.buttonSwitchChara)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="361697870012610" type="commandSwitchItem">
+                                    <param id="0" name="Text">Keyboard.StringFromKeyCode(player1lead.buttonSwitchItem)</param>
+                                </action>
+                                <action id="1" name="Append text" sid="434240351140833" type="commandLeft">
+                                    <param id="0" name="Text">&quot; - MOVE LEFT&quot;</param>
+                                </action>
+                                <action id="1" name="Append text" sid="106770510410150" type="commandRight">
+                                    <param id="0" name="Text">&quot; - MOVE RIGHT&quot;</param>
+                                </action>
+                                <action id="1" name="Append text" sid="696316966495159" type="commandUp">
+                                    <param id="0" name="Text">&quot; - MOVE UP&quot;</param>
+                                </action>
+                                <action id="1" name="Append text" sid="122192344537101" type="commandDown">
+                                    <param id="0" name="Text">&quot; - MOVE DOWN&quot;</param>
+                                </action>
+                                <action id="1" name="Append text" sid="861112104564301" type="commandAction">
+                                    <param id="0" name="Text">&quot; - ACTION / ATTACK&quot;</param>
+                                </action>
+                                <action id="1" name="Append text" sid="940637209873332" type="commandUseItem">
+                                    <param id="0" name="Text">&quot; - USE ITEM&quot;</param>
+                                </action>
+                                <action id="1" name="Append text" sid="762224223743257" type="commandSwitchChara">
+                                    <param id="0" name="Text">&quot; - SWITCH CHARACTER&quot;</param>
+                                </action>
+                                <action id="1" name="Append text" sid="216183017065698" type="commandSwitchItem">
+                                    <param id="0" name="Text">&quot; - SWITCH ITEM&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="930769405721334">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="352729979963933" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="664056821792392" type="commandLeft">
+                                    <param id="0" name="Text">&quot;D-PAD&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="703742911903591" type="commandRight">
+                                    <param id="0" name="Text">&quot;D-PAD&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="805636958595450" type="commandUp">
+                                    <param id="0" name="Text">&quot;D-PAD&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="995387089184132" type="commandDown">
+                                    <param id="0" name="Text">&quot;D-PAD&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="282636102896938" type="commandAction">
+                                    <param id="0" name="Text">&quot;A&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="131915469721725" type="commandUseItem">
+                                    <param id="0" name="Text">&quot;B&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="204324501159005" type="commandSwitchChara">
+                                    <param id="0" name="Text">&quot;X&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="859231132223128" type="commandSwitchItem">
+                                    <param id="0" name="Text">&quot;Y&quot;</param>
+                                </action>
+                                <action id="1" name="Append text" sid="896240012564276" type="commandLeft">
+                                    <param id="0" name="Text">&quot; - LEFT&quot;</param>
+                                </action>
+                                <action id="1" name="Append text" sid="893464248413864" type="commandRight">
+                                    <param id="0" name="Text">&quot; - RIGHT&quot;</param>
+                                </action>
+                                <action id="1" name="Append text" sid="919182282205807" type="commandUp">
+                                    <param id="0" name="Text">&quot; - UP&quot;</param>
+                                </action>
+                                <action id="1" name="Append text" sid="213354280660023" type="commandDown">
+                                    <param id="0" name="Text">&quot; - DOWN&quot;</param>
+                                </action>
+                                <action id="1" name="Append text" sid="298897035573996" type="commandAction">
+                                    <param id="0" name="Text">&quot; - ACTION / ATTACK&quot;</param>
+                                </action>
+                                <action id="1" name="Append text" sid="993672889817329" type="commandUseItem">
+                                    <param id="0" name="Text">&quot; - USE ITEM&quot;</param>
+                                </action>
+                                <action id="1" name="Append text" sid="472698958921461" type="commandSwitchChara">
+                                    <param id="0" name="Text">&quot; - SWITCH CHARACTER&quot;</param>
+                                </action>
+                                <action id="1" name="Append text" sid="659858742896519" type="commandSwitchItem">
+                                    <param id="0" name="Text">&quot; - SWITCH ITEM&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>soundModel</name>
+    <events>
+        <event-group description="" sid="491759308739447" title="volumeControl">
+            <sub-events>
+                <event-block sid="417839924015308">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="243492404939295" type="sfxBar">
+                            <param id="0" name="Comparison">1</param>
+                            <param id="1" name="Value">sfxVolume</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="724156775154133" type="System">
+                            <param id="0" name="Variable">sfxVolume</param>
+                            <param id="1" name="Value">sfxBar.Value</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="283702735277540">
+                    <conditions>
+                        <condition id="1" name="Compare value" sid="280790486082220" type="bgmBar">
+                            <param id="0" name="Comparison">1</param>
+                            <param id="1" name="Value">bgmVolume</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="719893053581047" type="System">
+                            <param id="0" name="Variable">bgmVolume</param>
+                            <param id="1" name="Value">bgmBar.Value</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="393680305717635">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="556386571732281" type="sfxBar" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set value" sid="520984808075290" type="sfxBar">
+                            <param id="0" name="Value">sfxVolume</param>
+                        </action>
+                        <action id="5" name="Set minimum" sid="441422406509041" type="sfxBar">
+                            <param id="0" name="Minimum">VOLUME_MIN</param>
+                        </action>
+                        <action id="4" name="Set maximum" sid="269841974583928" type="sfxBar">
+                            <param id="0" name="Maximum">VOLUME_MAX</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="317915684270817">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="569468509566494" type="bgmBar" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set value" sid="908290255655275" type="bgmBar">
+                            <param id="0" name="Value">bgmVolume</param>
+                        </action>
+                        <action id="5" name="Set minimum" sid="843814827333416" type="bgmBar">
+                            <param id="0" name="Minimum">VOLUME_MIN</param>
+                        </action>
+                        <action id="4" name="Set maximum" sid="910274804818034" type="bgmBar">
+                            <param id="0" name="Maximum">VOLUME_MAX</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

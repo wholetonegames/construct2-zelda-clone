@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>globalVariables</name>
+    <events>
+        <comment>IMPORTANT: all bookmarked variables must be saved on saveState</comment>
+        <variable constant="0" name="text_speed" sid="200180053262615" static="0" type="number">100</variable>
+        <variable constant="1" name="resolution_height" sid="1914414364475433" static="0" type="number">720</variable>
+        <variable constant="1" name="resolution_width" sid="1597835465898072" static="0" type="number">1280</variable>
+        <variable constant="0" name="PauseGame" sid="8777805679424256" static="0" type="number">0</variable>
+        <comment>sound</comment>
+        <variable comment="100" constant="0" name="sfxVolume" sid="722800439030345" static="0" type="number">80</variable>
+        <variable comment="95" constant="0" name="bgmVolume" sid="781624742766794" static="0" type="number">80</variable>
+        <variable constant="1" name="VOLUME_MAX" sid="821725189703184" static="0" type="number">100</variable>
+        <variable constant="1" name="VOLUME_MIN" sid="405964531712891" static="0" type="number">30</variable>
+        <variable constant="0" name="current_BGM" sid="972126566183601" static="0" type="text">jazzyMixLoop</variable>
+        <variable constant="1" name="BGM_TAG" sid="709219376713976" static="0" type="text">bgm</variable>
+        <variable constant="1" name="SFX_TAG" sid="713084235090624" static="0" type="text">sfx</variable>
+        <comment>HP</comment>
+        <variable comment="equivalent to 3 full hearts" constant="1" name="HP_default" sid="1422554941533377" static="0" type="number">6</variable>
+        <variable comment="equivalent to 6 full hearts" constant="1" name="HP_MAX" sid="213770662521807" static="0" type="number">12</variable>
+        <variable constant="0" name="HPcurrent" sid="9444102038716532" static="0" type="number">0</variable>
+        <variable constant="0" name="HPcurrentMAX" sid="8874977409751385" static="0" type="number">0</variable>
+        <variable constant="0" name="HP_current_Cicada" sid="19068596339307" static="0" type="number">6</variable>
+        <variable bookmark="1" constant="0" name="HP_max_Cicada" sid="155844320534255" static="0" type="number">6</variable>
+        <variable constant="0" name="HP_current_Slave" sid="5944491512185006" static="0" type="number">6</variable>
+        <variable bookmark="1" constant="0" name="HP_max_Slave" sid="7726424394047004" static="0" type="number">6</variable>
+        <variable constant="0" name="HP_current_Soldier" sid="8812364368165559" static="0" type="number">6</variable>
+        <variable bookmark="1" constant="0" name="HP_max_Soldier" sid="4214186209543133" static="0" type="number">6</variable>
+        <variable comment="boolean:0-false,1-true" constant="0" name="attacked_Cicada" sid="9309632141706773" static="0" type="number">0</variable>
+        <variable comment="boolean:0-false,1-true" constant="0" name="attacked_Slave" sid="8532627218393447" static="0" type="number">0</variable>
+        <variable comment="boolean:0-false,1-true" constant="0" name="attacked_Soldier" sid="6889502873945018" static="0" type="number">0</variable>
+        <variable bookmark="1" comment="boolean:0-false,1-true" constant="0" name="KO_Cicada" sid="5041280597694917" static="0" type="number">0</variable>
+        <variable comment="boolean:0-false,1-true" constant="0" name="KO_Slave" sid="1058698333202829" static="0" type="number">0</variable>
+        <variable bookmark="1" comment="boolean:0-false,1-true" constant="0" name="KO_Soldier" sid="9993091617850249" static="0" type="number">0</variable>
+        <comment>Party Management &#x0D;&#x0A;to initialize party: change only partyConfiguration, other variables will follow</comment>
+        <variable bookmark="1" comment="0=1chara, 1=AB,2=AC,3=BC,4=3charas, 5=NoCharas" constant="0" name="partyConfiguration" sid="9864975446377707" static="0" type="number">0</variable>
+        <variable constant="1" name="party_of_1" sid="4202571836310996" static="0" type="number">0</variable>
+        <variable constant="1" name="PARTY_CICADA_SLAVE" sid="3470905047718567" static="0" type="number">1</variable>
+        <variable constant="1" name="PARTY_CICADA_SOLDIER" sid="3578786278906868" static="0" type="number">2</variable>
+        <variable constant="1" name="PARTY_SLAVE_SOLDIER" sid="4031774709443045" static="0" type="number">3</variable>
+        <variable constant="1" name="party_of_3" sid="5408151189317856" static="0" type="number">4</variable>
+        <variable constant="1" name="PARTY_OF_NONE" sid="4078186299941413" static="0" type="number">5</variable>
+        <variable bookmark="1" constant="0" name="has_cicada_joined" sid="195418331208985" static="0" type="number">0</variable>
+        <variable bookmark="1" constant="0" name="has_soldier_joined" sid="764347077669965" static="0" type="number">0</variable>
+        <variable comment="0=cicada;1=slave;2=soldier" constant="0" name="partyLead" sid="8504771692467247" static="0" type="number">1</variable>
+        <variable constant="1" name="Cicada" sid="966777389895110" static="0" type="number">0</variable>
+        <variable constant="1" name="slave" sid="271882621489371" static="0" type="number">1</variable>
+        <variable constant="1" name="soldier" sid="471717532018518" static="0" type="number">2</variable>
+        <variable constant="0" name="partyTransfer" sid="5609047559841163" static="0" type="number">0</variable>
+        <variable bookmark="1" constant="0" name="partyMoney" sid="4719953186316581" static="0" type="number">0</variable>
+        <comment>Room Navigation</comment>
+        <variable bookmark="1" constant="0" name="dungeonLevel" sid="4439238628220415" static="0" type="text">a</variable>
+        <variable bookmark="1" constant="0" name="dungeonX" sid="5831572514890672" static="0" type="number">0</variable>
+        <variable bookmark="1" constant="0" name="dungeonY" sid="5418399376087213" static="0" type="number">0</variable>
+        <variable comment="override for field doors" constant="0" name="partyY" sid="4265107132048491" static="0" type="number">0</variable>
+        <variable comment="override for field doors" constant="0" name="partyX" sid="4705610302290994" static="0" type="number">0</variable>
+        <variable bookmark="1" constant="0" name="lastCheckpoint" sid="935357560583217" static="0" type="text">a54</variable>
+        <variable constant="0" name="dungeonLayoutName" sid="7410506950838154" static="0" type="text">a</variable>
+        <variable constant="0" name="startingPositionAX" sid="9981561372266505" static="0" type="number">0</variable>
+        <variable constant="0" name="startingPositionAY" sid="7420125231987401" static="0" type="number">0</variable>
+        <variable constant="0" name="startingPositionBX" sid="1740456837896004" static="0" type="number">0</variable>
+        <variable constant="0" name="startingPositionBY" sid="2661684398667179" static="0" type="number">0</variable>
+        <variable constant="0" name="startingPositionCY" sid="8588376557306037" static="0" type="number">0</variable>
+        <variable constant="0" name="startingPositionCX" sid="6802903267945664" static="0" type="number">0</variable>
+        <variable constant="0" name="initialAngle" sid="2131805903244021" static="0" type="number">90</variable>
+        <variable comment="boolean:0-false,1-true" constant="0" name="preppingNewRoom" sid="2411397274073386" static="0" type="number">0</variable>
+        <variable comment="boolean:0-false,1-true" constant="0" name="goingToNewRoom" sid="457200306072105" static="0" type="number">0</variable>
+        <variable comment="0-red;1-blue;" constant="0" name="currentDoorColor" sid="537814526918858" static="0" type="number">5</variable>
+        <variable constant="0" name="spikeTypeUp" sid="157621982645441" static="0" type="number">0</variable>
+        <variable comment="distance between characters" constant="1" name="CHARA_DISTANCE" sid="3830115315762821" static="0" type="number">64</variable>
+        <comment>Layer Names</comment>
+        <variable constant="1" name="layerBG" sid="2045448406251586" static="0" type="number">0</variable>
+        <variable constant="1" name="layerChara" sid="1906211723339956" static="0" type="number">1</variable>
+        <variable constant="1" name="layerMenu" sid="6972527796314207" static="0" type="number">2</variable>
+        <comment>LoadStates</comment>
+        <variable constant="0" name="currentLoadState" sid="6771085003330647" static="0" type="text">a</variable>
+        <variable constant="1" name="LOADSTATE1" sid="139616616737958" static="0" type="text">slot1.sav</variable>
+        <variable constant="1" name="LOADSTATE2" sid="6643640744736368" static="0" type="text">slot2.sav</variable>
+        <variable constant="1" name="LOADSTATE3" sid="1621135056997624" static="0" type="text">slot3.sav</variable>
+        <variable constant="0" name="hasLoad1" sid="593121637348502" static="0" type="number">0</variable>
+        <variable constant="0" name="hasLoad2" sid="586039739379850" static="0" type="number">0</variable>
+        <variable constant="0" name="hasLoad3" sid="945080203540368" static="0" type="number">0</variable>
+        <variable constant="0" name="DateTime" sid="312095235372069" static="0" type="text">aaa</variable>
+        <comment>miniMap</comment>
+        <variable bookmark="1" constant="0" name="dungeonMaxX" sid="3795289879668248" static="0" type="number">1</variable>
+        <variable bookmark="1" constant="0" name="dungeonMaxY" sid="1891546909976616" static="0" type="number">1</variable>
+        <variable constant="0" name="miniMapInitialScreenX" sid="1910660405057114" static="0" type="number">1135</variable>
+        <variable constant="0" name="miniMapInitialScreenY" sid="3743632316452982" static="0" type="number">16</variable>
+        <variable constant="0" name="miniMapHeightWidth" sid="1944008156384663" static="0" type="number">128</variable>
+        <comment>item inventory</comment>
+        <variable comment="0-3,depends on character selected" constant="0" name="ItemSelected" sid="5915337011685782" static="0" type="number">0</variable>
+        <variable bookmark="1" comment="0-false;1-true" constant="0" name="Item_cicada_shot" sid="122831761842016" static="0" type="number">0</variable>
+        <variable bookmark="1" comment="0-false;1-true" constant="0" name="Item_cicada_statue" sid="1807701590026095" static="0" type="number">0</variable>
+        <variable bookmark="1" comment="0-false;1-true" constant="0" name="Item_cicada_requiem" sid="3632326593208443" static="0" type="number">0</variable>
+        <variable bookmark="1" comment="0-false;1-true" constant="0" name="Item_slave_boomerang" sid="3109386195494072" static="0" type="number">0</variable>
+        <variable bookmark="1" comment="0-false;1-true" constant="0" name="Item_slave_hpPotion" sid="7928710246378179" static="0" type="number">1</variable>
+        <variable bookmark="1" comment="0-false;1-true" constant="0" name="Item_slave_magic" sid="2905242936570372" static="0" type="number">0</variable>
+        <variable bookmark="1" comment="0-false;1-true" constant="0" name="Item_soldier_shot" sid="9864388429268756" static="0" type="number">1</variable>
+        <variable bookmark="1" comment="0-false;1-true" constant="0" name="Item_soldier_bomb" sid="9510645210467025" static="0" type="number">0</variable>
+        <variable bookmark="1" comment="0-false;1-true" constant="0" name="Item_soldier_fire" sid="173592239126578" static="0" type="number">0</variable>
+        <variable bookmark="1" comment="0-false;1-true" constant="0" name="Item_sodier_wind" sid="699973394138099" static="0" type="number">0</variable>
+        <variable constant="0" name="itemUseBarPercentage" sid="1879549162505805" static="0" type="number">0</variable>
+        <comment>Animation</comment>
+        <variable constant="0" name="previousAnimationName" sid="4707903082695505" static="0" type="text"></variable>
+        <variable constant="0" name="animationRestingFrame" sid="977365171751335" static="0" type="number">1</variable>
+        <variable bookmark="1" constant="0" name="swordLevel" sid="512732768171602" static="0" type="number">1</variable>
+        <comment>Bosses</comment>
+        <variable bookmark="1" constant="0" name="beatenBoss1" sid="869439757826840" static="0" type="number">0</variable>
+        <variable bookmark="1" constant="0" name="beatenBoss2" sid="724531533052767" static="0" type="number">0</variable>
+        <variable bookmark="1" constant="0" name="beatenBoss3" sid="239909422225292" static="0" type="number">0</variable>
+        <variable bookmark="1" constant="0" name="beatenBoss4" sid="421674990585754" static="0" type="number">0</variable>
+        <variable bookmark="1" constant="0" name="beatenBoss5" sid="721592050114922" static="0" type="number">0</variable>
+        <variable bookmark="1" constant="0" name="beatenBoss6" sid="538705375674626" static="0" type="number">0</variable>
+        <variable bookmark="1" constant="0" name="beatenBoss7" sid="841784461242012" static="0" type="number">0</variable>
+        <comment>Second Quest</comment>
+        <variable constant="0" name="isSecondQuest" sid="394992960920949" static="0" type="number">0</variable>
+        <comment>cutscenes</comment>
+        <variable constant="0" name="afterCutScene" sid="380760947892650" static="0" type="text">introScreen</variable>
+    </events>
+</c2eventsheet>
